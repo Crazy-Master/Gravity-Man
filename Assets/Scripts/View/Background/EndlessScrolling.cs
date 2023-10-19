@@ -1,34 +1,47 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class EndlessScrolling : MonoBehaviour
 {
-    [SerializeField] private SpriteRenderer[] _arraySprite = new SpriteRenderer[2];
-    private GameObject[] _arrayObjSprite = new GameObject[2];
-    private Queue<GameObject> _queueSprite = new Queue<GameObject>();
-    private Vector3[] _startPosition = new Vector3[2];
+    private SpriteRenderer[] _arraySprite;
+    private GameObject[] _arrayObjSprite;
+    private Vector3[] _startPosition;
+    private int _length;
     private Camera _cam;
     private float _modifier;
     private float _width;
 
     private bool first = true;
+
+    public void SetSpriteRenderer(SpriteRenderer[] spriteRenderers)
+    {
+        if (_arraySprite == null)
+        {
+            _arraySprite = spriteRenderers;
+            _length = _arraySprite.Length;
+            _arrayObjSprite = new GameObject[_length];
+            _startPosition = new Vector3[_length];
+        }
+    }
     public void Init(Vector3 scale, Sprite sprite, float modifier, int orderInLayer)
     {
         _cam = Camera.main;
         _modifier = modifier;
-        for (int i = 0; i < _arraySprite.Length; i++)
+        for (int i = 0; i < _length; i++)
         {
             var cell = _arraySprite[i];
             cell.transform.localScale = scale;
             if (_width == 0) _width = sprite.bounds.size.x * scale.x;
             cell.sprite = sprite;
-            var position = cell.transform.position;
-            position += new Vector3(_width * i, 0, 0);
-            cell.transform.position = position;
+            
+            var cellTransform = cell.transform;
+            var position = cellTransform.position;
+            position += new Vector3(_width * (i-1), 0, 0);
+            cellTransform.position = position;
             _startPosition[i] = position;
             cell.sortingOrder = orderInLayer;
-            
-            _queueSprite.Enqueue(cell.gameObject);
             _arrayObjSprite[i] = cell.gameObject;
         }
     }
@@ -36,38 +49,52 @@ public class EndlessScrolling : MonoBehaviour
     private void Update()
     {
         MoveSprites();
-        if ((_cam.transform.position.x - _queueSprite.Peek().transform.position.x) > _width)
+        if ((_cam.transform.position.x - _arrayObjSprite[1].transform.position.x) > _width)
         {
-            TransferSprite();
+            TransferRight();
         }
-        /*if ((cam.transform.position.x - transform.position.x) < -width)
+        if ((_cam.transform.position.x - _arrayObjSprite[1].transform.position.x) < -_width)
         {
-            startPosition -= new Vector3(width, 0, 0);
-        }*/ //назад идти не может
+            TransferLeft();
+        }
     }
 
     private void MoveSprites()
     {
         Vector3 camOffset = _cam.transform.position * _modifier; 
-        for (int i = 0; i < _arrayObjSprite.Length; i++)
+        for (int i = 0; i < _length; i++)
         {
             _arrayObjSprite[i].transform.position = _startPosition[i] + new Vector3(camOffset.x, camOffset.y, 0); 
         }
     }
 
-    private void TransferSprite()
+    private void TransferRight()
     {
-        var sprite = _queueSprite.Dequeue();
-        _queueSprite.Enqueue(sprite);
-        if (first)
+        _startPosition[0] += new Vector3(_width * 3, 0, 0);
+        GameObject obj = _arrayObjSprite[0];
+        Vector3 vec = _startPosition[0];
+        for (int i = 0; i < _length-1; i++)
         {
-            _startPosition[0] += new Vector3(_width * 2, 0, 0);  
+            _arrayObjSprite[i] = _arrayObjSprite[i + 1];
+            _startPosition[i] = _startPosition[i + 1];
         }
-        else
+        _arrayObjSprite[_length-1] = obj;
+        _startPosition[_length-1] = vec;
+    }
+    
+    private void TransferLeft()
+    {
+        
+        _startPosition[2] -= new Vector3(_width * 3, 0, 0);
+        GameObject obj = _arrayObjSprite[_length-1];
+        Vector3 vec = _startPosition[_length-1];
+        for (int i = _length - 1; i > 0; i--)
         {
-            _startPosition[1] += new Vector3(_width * 2, 0, 0);  
+            _arrayObjSprite[i] = _arrayObjSprite[i - 1];
+            _startPosition[i] = _startPosition[i - 1];
         }
-        first = !first;
+        _arrayObjSprite[0] = obj;
+        _startPosition[0] = vec;
     }
     
 }
