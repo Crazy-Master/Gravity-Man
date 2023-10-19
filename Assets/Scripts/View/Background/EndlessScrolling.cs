@@ -9,6 +9,8 @@ public class EndlessScrolling : MonoBehaviour
     private GameObject[] _arrayObjSprite;
     private Vector3[] _startPosition;
     private int _length;
+    private int _centre;
+    
     private Camera _cam;
     private float _modifier;
     private float _width;
@@ -21,6 +23,7 @@ public class EndlessScrolling : MonoBehaviour
         {
             _arraySprite = spriteRenderers;
             _length = _arraySprite.Length;
+            _centre = (int)((_length - 1) / 2);
             _arrayObjSprite = new GameObject[_length];
             _startPosition = new Vector3[_length];
         }
@@ -38,7 +41,7 @@ public class EndlessScrolling : MonoBehaviour
             
             var cellTransform = cell.transform;
             var position = cellTransform.position;
-            position += new Vector3(_width * (i-1), 0, 0);
+            position += new Vector3(_width * (i-_centre), 0, 0);
             cellTransform.position = position;
             _startPosition[i] = position;
             cell.sortingOrder = orderInLayer;
@@ -49,11 +52,11 @@ public class EndlessScrolling : MonoBehaviour
     private void Update()
     {
         MoveSprites();
-        if ((_cam.transform.position.x - _arrayObjSprite[1].transform.position.x) > _width)
+        if ((_cam.transform.position.x - _arrayObjSprite[_centre].transform.position.x) > _width)
         {
             TransferRight();
         }
-        if ((_cam.transform.position.x - _arrayObjSprite[1].transform.position.x) < -_width)
+        if ((_cam.transform.position.x - _arrayObjSprite[_centre].transform.position.x) < -_width)
         {
             TransferLeft();
         }
@@ -70,7 +73,7 @@ public class EndlessScrolling : MonoBehaviour
 
     private void TransferRight()
     {
-        _startPosition[0] += new Vector3(_width * 3, 0, 0);
+        _startPosition[0] += new Vector3(_width * _length, 0, 0);
         GameObject obj = _arrayObjSprite[0];
         Vector3 vec = _startPosition[0];
         for (int i = 0; i < _length-1; i++)
@@ -85,7 +88,7 @@ public class EndlessScrolling : MonoBehaviour
     private void TransferLeft()
     {
         
-        _startPosition[2] -= new Vector3(_width * 3, 0, 0);
+        _startPosition[_length-1] -= new Vector3(_width * _length, 0, 0);
         GameObject obj = _arrayObjSprite[_length-1];
         Vector3 vec = _startPosition[_length-1];
         for (int i = _length - 1; i > 0; i--)
