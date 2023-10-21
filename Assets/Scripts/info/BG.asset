@@ -59,3 +59,29 @@ MonoBehaviour:
       modifier: 0.7
     - sprite: {fileID: 21300000, guid: 461a892442d42474a8af6772a0d97f1b, type: 3}
       modifier: 0.6
+  - scene: 4
+    layers:
+    - sprite: {fileID: 21300000, guid: dd65a99ff8dc1944d9f55533b425f351, type: 3}
+      modifier: 0.9
+    - sprite: {fileID: 21300000, guid: eaaf79daa4dda4d4294de66a746711e2, type: 3}
+      modifier: 0.8
+    - sprite: {fileID: 21300000, guid: a6e9380ca75dafd4298f002691c561ae, type: 3}
+      modifier: 0.7
+    - sprite: {fileID: 21300000, guid: 73fdd00c74b2ab54f91f62bab0ac7541, type: 3}
+      modifier: 0.6
+  - scene: 5
+    layers:
+    - sprite: {fileID: 21300000, guid: 65ea3a362a2c66b49be7cf3c49cd5ccd, type: 3}
+      modifier: 0.9
+    - sprite: {fileID: 21300000, guid: 8a6f5584016689840be6b029af168834, type: 3}
+      modifier: 0.8
+  - scene: 6
+    layers:
+    - sprite: {fileID: 21300000, guid: 67c5e69042768414aa38d2f668fa6ccd, type: 3}
+      modifier: 0.9
+    - sprite: {fileID: 21300000, guid: 5c50a6f7c2e4a9144aa785bdadc12aa8, type: 3}
+      modifier: 0.8
+  - scene: 7
+    layers:
+    - sprite: {fileID: 21300000, guid: 5fa269c48c494f8489cc959b79e55117, type: 3}
+      modifier: 1
