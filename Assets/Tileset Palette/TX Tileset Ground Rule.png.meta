@@ -149,7 +149,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -165,12 +165,12 @@ TextureImporter:
       name: TX Tileset Ground Rule_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 64
         y: 480
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -186,12 +186,12 @@ TextureImporter:
       name: TX Tileset Ground Rule_2
       rect:
         serializedVersion: 2
-        x: 64
+        x: 128
         y: 480
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -207,12 +207,12 @@ TextureImporter:
       name: TX Tileset Ground Rule_3
       rect:
         serializedVersion: 2
-        x: 96
+        x: 192
         y: 480
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -228,12 +228,12 @@ TextureImporter:
       name: TX Tileset Ground Rule_4
       rect:
         serializedVersion: 2
-        x: 128
+        x: 256
         y: 480
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -249,12 +249,12 @@ TextureImporter:
       name: TX Tileset Ground Rule_5
       rect:
         serializedVersion: 2
-        x: 160
+        x: 320
         y: 480
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -270,12 +270,12 @@ TextureImporter:
       name: TX Tileset Ground Rule_6
       rect:
         serializedVersion: 2
-        x: 192
+        x: 384
         y: 480
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -291,12 +291,12 @@ TextureImporter:
       name: TX Tileset Ground Rule_7
       rect:
         serializedVersion: 2
-        x: 224
+        x: 448
         y: 480
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -312,12 +312,12 @@ TextureImporter:
       name: TX Tileset Ground Rule_8
       rect:
         serializedVersion: 2
-        x: 256
-        y: 480
+        x: 32
+        y: 448
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -333,12 +333,12 @@ TextureImporter:
       name: TX Tileset Ground Rule_9
       rect:
         serializedVersion: 2
-        x: 288
-        y: 480
+        x: 96
+        y: 448
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -354,12 +354,12 @@ TextureImporter:
       name: TX Tileset Ground Rule_10
       rect:
         serializedVersion: 2
-        x: 320
-        y: 480
+        x: 160
+        y: 448
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -375,12 +375,12 @@ TextureImporter:
       name: TX Tileset Ground Rule_11
       rect:
         serializedVersion: 2
-        x: 352
-        y: 480
+        x: 224
+        y: 448
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -396,12 +396,12 @@ TextureImporter:
       name: TX Tileset Ground Rule_12
       rect:
         serializedVersion: 2
-        x: 384
-        y: 480
+        x: 288
+        y: 448
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -417,12 +417,12 @@ TextureImporter:
       name: TX Tileset Ground Rule_13
       rect:
         serializedVersion: 2
-        x: 416
-        y: 480
+        x: 352
+        y: 448
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -438,12 +438,12 @@ TextureImporter:
       name: TX Tileset Ground Rule_14
       rect:
         serializedVersion: 2
-        x: 448
-        y: 480
+        x: 416
+        y: 448
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -460,11 +460,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 480
-        y: 480
+        y: 448
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -481,11 +481,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 448
+        y: 416
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -501,12 +501,12 @@ TextureImporter:
       name: TX Tileset Ground Rule_17
       rect:
         serializedVersion: 2
-        x: 32
-        y: 448
+        x: 64
+        y: 416
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -522,12 +522,12 @@ TextureImporter:
       name: TX Tileset Ground Rule_18
       rect:
         serializedVersion: 2
-        x: 64
-        y: 448
+        x: 128
+        y: 416
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -543,12 +543,12 @@ TextureImporter:
       name: TX Tileset Ground Rule_19
       rect:
         serializedVersion: 2
-        x: 96
-        y: 448
+        x: 192
+        y: 416
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -564,12 +564,12 @@ TextureImporter:
       name: TX Tileset Ground Rule_20
       rect:
         serializedVersion: 2
-        x: 128
-        y: 448
+        x: 256
+        y: 416
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -585,12 +585,12 @@ TextureImporter:
       name: TX Tileset Ground Rule_21
       rect:
         serializedVersion: 2
-        x: 160
-        y: 448
+        x: 320
+        y: 416
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -606,12 +606,12 @@ TextureImporter:
       name: TX Tileset Ground Rule_22
       rect:
         serializedVersion: 2
-        x: 192
-        y: 448
+        x: 384
+        y: 416
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -627,12 +627,12 @@ TextureImporter:
       name: TX Tileset Ground Rule_23
       rect:
         serializedVersion: 2
-        x: 224
-        y: 448
+        x: 448
+        y: 416
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -648,12 +648,12 @@ TextureImporter:
       name: TX Tileset Ground Rule_24
       rect:
         serializedVersion: 2
-        x: 256
-        y: 448
+        x: 32
+        y: 384
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -669,12 +669,12 @@ TextureImporter:
       name: TX Tileset Ground Rule_25
       rect:
         serializedVersion: 2
-        x: 288
-        y: 448
+        x: 96
+        y: 384
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -690,12 +690,12 @@ TextureImporter:
       name: TX Tileset Ground Rule_26
       rect:
         serializedVersion: 2
-        x: 320
-        y: 448
+        x: 160
+        y: 384
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -711,12 +711,12 @@ TextureImporter:
       name: TX Tileset Ground Rule_27
       rect:
         serializedVersion: 2
-        x: 352
-        y: 448
+        x: 224
+        y: 384
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -732,12 +732,12 @@ TextureImporter:
       name: TX Tileset Ground Rule_28
       rect:
         serializedVersion: 2
-        x: 384
-        y: 448
+        x: 288
+        y: 384
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -753,12 +753,12 @@ TextureImporter:
       name: TX Tileset Ground Rule_29
       rect:
         serializedVersion: 2
-        x: 416
-        y: 448
+        x: 352
+        y: 384
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -774,12 +774,12 @@ TextureImporter:
       name: TX Tileset Ground Rule_30
       rect:
         serializedVersion: 2
-        x: 448
-        y: 448
+        x: 416
+        y: 384
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -796,11 +796,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 480
-        y: 448
+        y: 384
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -817,11 +817,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 416
+        y: 352
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -837,12 +837,12 @@ TextureImporter:
       name: TX Tileset Ground Rule_33
       rect:
         serializedVersion: 2
-        x: 32
-        y: 416
+        x: 64
+        y: 352
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -858,12 +858,12 @@ TextureImporter:
       name: TX Tileset Ground Rule_34
       rect:
         serializedVersion: 2
-        x: 64
-        y: 416
+        x: 128
+        y: 352
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -879,12 +879,12 @@ TextureImporter:
       name: TX Tileset Ground Rule_35
       rect:
         serializedVersion: 2
-        x: 96
-        y: 416
+        x: 192
+        y: 352
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -900,12 +900,12 @@ TextureImporter:
       name: TX Tileset Ground Rule_36
       rect:
         serializedVersion: 2
-        x: 128
-        y: 416
+        x: 256
+        y: 352
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -921,12 +921,12 @@ TextureImporter:
       name: TX Tileset Ground Rule_37
       rect:
         serializedVersion: 2
-        x: 160
-        y: 416
+        x: 320
+        y: 352
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -942,12 +942,12 @@ TextureImporter:
       name: TX Tileset Ground Rule_38
       rect:
         serializedVersion: 2
-        x: 192
-        y: 416
+        x: 384
+        y: 352
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -963,12 +963,12 @@ TextureImporter:
       name: TX Tileset Ground Rule_39
       rect:
         serializedVersion: 2
-        x: 224
-        y: 416
+        x: 448
+        y: 352
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -984,18 +984,18 @@ TextureImporter:
       name: TX Tileset Ground Rule_40
       rect:
         serializedVersion: 2
-        x: 256
-        y: 416
+        x: 32
+        y: 320
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68cbbc97b4e06fe46b23486fc355f874
+      spriteID: 9479dbc44dab49f4c8428b80e5bbeb6b
       internalID: 1943379255
       vertices: []
       indices: 
@@ -1005,18 +1005,18 @@ TextureImporter:
       name: TX Tileset Ground Rule_41
       rect:
         serializedVersion: 2
-        x: 288
-        y: 416
+        x: 96
+        y: 320
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bcf6b69cb2b79ac479a31894c4af962a
+      spriteID: 9b8edbcdcc6d1fd4e86a11016240cf70
       internalID: 819498987
       vertices: []
       indices: 
@@ -1026,18 +1026,18 @@ TextureImporter:
       name: TX Tileset Ground Rule_42
       rect:
         serializedVersion: 2
-        x: 320
-        y: 416
+        x: 160
+        y: 320
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c88314067cf7b6478c050221ef4a85c
+      spriteID: f5cfb4d2d83f1d64fa3e345b29650af1
       internalID: -153706728
       vertices: []
       indices: 
@@ -1047,18 +1047,18 @@ TextureImporter:
       name: TX Tileset Ground Rule_43
       rect:
         serializedVersion: 2
-        x: 352
-        y: 416
+        x: 224
+        y: 320
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a98afc0df60866e4e8c89f3f3c7324f2
+      spriteID: dd93dd25906a2394cb573b2fa8899c54
       internalID: 1905326824
       vertices: []
       indices: 
@@ -1068,18 +1068,18 @@ TextureImporter:
       name: TX Tileset Ground Rule_44
       rect:
         serializedVersion: 2
-        x: 384
-        y: 416
+        x: 288
+        y: 320
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc4ffc055654979448585e51091d7d80
+      spriteID: 1dce64220c1c3044eb6a13fa47b4ab1d
       internalID: 397365374
       vertices: []
       indices: 
@@ -1089,18 +1089,18 @@ TextureImporter:
       name: TX Tileset Ground Rule_45
       rect:
         serializedVersion: 2
-        x: 416
-        y: 416
+        x: 352
+        y: 320
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2244e0b17c827e4f9ab095196707304
+      spriteID: c0be480aad79bc04288ac30061a26c41
       internalID: -3043854
       vertices: []
       indices: 
@@ -1110,18 +1110,18 @@ TextureImporter:
       name: TX Tileset Ground Rule_46
       rect:
         serializedVersion: 2
-        x: 448
-        y: 416
+        x: 416
+        y: 320
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca7d93afbf367ec4ab8b1b704c1ae632
+      spriteID: c5aa56c99994d1242879122d7b2c38b9
       internalID: 1020410985
       vertices: []
       indices: 
@@ -1132,17 +1132,17 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 480
-        y: 416
+        y: 320
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21956f509ca58cc4a963030b68f1ac2c
+      spriteID: 8d658fd74812961409e23148df5dc30d
       internalID: -1237974209
       vertices: []
       indices: 
@@ -1153,17 +1153,17 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 384
+        y: 288
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57a25606a90084944acdf208079a816c
+      spriteID: 5f7ed212046cc6a47ae277458b607bfe
       internalID: -117579585
       vertices: []
       indices: 
@@ -1173,18 +1173,18 @@ TextureImporter:
       name: TX Tileset Ground Rule_49
       rect:
         serializedVersion: 2
-        x: 32
-        y: 384
+        x: 64
+        y: 288
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6047b36ffbd8aa7429a5e271edecab0d
+      spriteID: d9edd0d9125249742921812d2661ac25
       internalID: -1907538627
       vertices: []
       indices: 
@@ -1194,18 +1194,18 @@ TextureImporter:
       name: TX Tileset Ground Rule_50
       rect:
         serializedVersion: 2
-        x: 64
-        y: 384
+        x: 128
+        y: 288
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6318c3199e456540924c1c25fb07000
+      spriteID: b08733c308791a8409d3c1c135523c11
       internalID: -49615005
       vertices: []
       indices: 
@@ -1215,18 +1215,18 @@ TextureImporter:
       name: TX Tileset Ground Rule_51
       rect:
         serializedVersion: 2
-        x: 96
-        y: 384
+        x: 192
+        y: 288
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ecb40cf66ebcf242860a83473bfecb4
+      spriteID: 294eb1ee00b80634cad5b7e36e82c897
       internalID: 150436756
       vertices: []
       indices: 
@@ -1236,18 +1236,18 @@ TextureImporter:
       name: TX Tileset Ground Rule_52
       rect:
         serializedVersion: 2
-        x: 128
-        y: 384
+        x: 256
+        y: 288
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b5328bff8c12e1498653f4546a50fc7
+      spriteID: 390a865e0e04dc34c9c2153ed75ab5ac
       internalID: -351886055
       vertices: []
       indices: 
@@ -1257,18 +1257,18 @@ TextureImporter:
       name: TX Tileset Ground Rule_53
       rect:
         serializedVersion: 2
-        x: 160
-        y: 384
+        x: 320
+        y: 288
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6545e96c710a9148a4d0f8b53b58724
+      spriteID: 149281a33f92ab2458cac26efc58a536
       internalID: -1235923354
       vertices: []
       indices: 
@@ -1278,18 +1278,18 @@ TextureImporter:
       name: TX Tileset Ground Rule_54
       rect:
         serializedVersion: 2
-        x: 192
-        y: 384
+        x: 384
+        y: 288
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfa86ea9f02e208438694a469824a7ad
+      spriteID: 16f7ae48bc72a5145a68422bbaaef086
       internalID: 2063602526
       vertices: []
       indices: 
@@ -1299,18 +1299,18 @@ TextureImporter:
       name: TX Tileset Ground Rule_55
       rect:
         serializedVersion: 2
-        x: 224
-        y: 384
+        x: 448
+        y: 288
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc402f54304f2d04fbbc3b2bcd6b1c43
+      spriteID: ecb9d27372add064ea0726347a5ed0cf
       internalID: 692541403
       vertices: []
       indices: 
@@ -1320,18 +1320,18 @@ TextureImporter:
       name: TX Tileset Ground Rule_56
       rect:
         serializedVersion: 2
-        x: 256
-        y: 384
+        x: 32
+        y: 256
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 100c0f123ea1a7d47a97461f2a4331a3
+      spriteID: 87fb2c53b31c3f64482d2e265602a4b4
       internalID: 11439967
       vertices: []
       indices: 
@@ -1341,18 +1341,18 @@ TextureImporter:
       name: TX Tileset Ground Rule_57
       rect:
         serializedVersion: 2
-        x: 288
-        y: 384
+        x: 96
+        y: 256
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8acf992023d258408bd598309ba7ae7
+      spriteID: 53f2f59d233ba00489abb3205d767d61
       internalID: -552587626
       vertices: []
       indices: 
@@ -1362,18 +1362,18 @@ TextureImporter:
       name: TX Tileset Ground Rule_58
       rect:
         serializedVersion: 2
-        x: 320
-        y: 384
+        x: 160
+        y: 256
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58bea053a0432a14d8d8573b3c308909
+      spriteID: d322868dc6d4ba64fa10b95e8953aa95
       internalID: 1759822617
       vertices: []
       indices: 
@@ -1383,18 +1383,18 @@ TextureImporter:
       name: TX Tileset Ground Rule_59
       rect:
         serializedVersion: 2
-        x: 352
-        y: 384
+        x: 224
+        y: 256
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8089acae66d025a40a176a533c1ba19d
+      spriteID: 06822cab5e18a2a439c37295fec317e1
       internalID: -299593507
       vertices: []
       indices: 
@@ -1404,18 +1404,18 @@ TextureImporter:
       name: TX Tileset Ground Rule_60
       rect:
         serializedVersion: 2
-        x: 384
-        y: 384
+        x: 288
+        y: 256
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 560f7ca1acd491c47abf664baee28d97
+      spriteID: dff778bde98ce0b46b861b924b008d0b
       internalID: 2032765506
       vertices: []
       indices: 
@@ -1425,18 +1425,18 @@ TextureImporter:
       name: TX Tileset Ground Rule_61
       rect:
         serializedVersion: 2
-        x: 416
-        y: 384
+        x: 352
+        y: 256
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8c2f3b2144d69b4081d7a6153b971e0
+      spriteID: 26ddfa03cee1e2745ab49312646072bf
       internalID: -645699442
       vertices: []
       indices: 
@@ -1446,18 +1446,18 @@ TextureImporter:
       name: TX Tileset Ground Rule_62
       rect:
         serializedVersion: 2
-        x: 448
-        y: 384
+        x: 416
+        y: 256
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17c9cef3972ac554b812beb9f1b7125b
+      spriteID: 75b9e240b2048dd4193615a4da4ac6de
       internalID: -641182356
       vertices: []
       indices: 
@@ -1468,17 +1468,17 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 480
-        y: 384
+        y: 256
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd40924af4744ac4ebc6e3671740fdd2
+      spriteID: 1957e85d33a02b14c978c92226341fb8
       internalID: -1248011993
       vertices: []
       indices: 
@@ -1489,17 +1489,17 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 352
+        y: 224
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40817e5cc3c19784e8ada3904ef105fc
+      spriteID: a5e3581ee7d6d6341b223fc36ecfaf1e
       internalID: 1640222538
       vertices: []
       indices: 
@@ -1509,18 +1509,18 @@ TextureImporter:
       name: TX Tileset Ground Rule_65
       rect:
         serializedVersion: 2
-        x: 32
-        y: 352
+        x: 64
+        y: 224
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42587e004d28e554c91e97ec856da600
+      spriteID: 057681ad919afbb469f65745c7143f98
       internalID: 1078361780
       vertices: []
       indices: 
@@ -1530,18 +1530,18 @@ TextureImporter:
       name: TX Tileset Ground Rule_66
       rect:
         serializedVersion: 2
-        x: 64
-        y: 352
+        x: 128
+        y: 224
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81eef449db2e37c459e13994612b5a64
+      spriteID: cd312bc9368563a4292a79aaa0951cd1
       internalID: 1150157778
       vertices: []
       indices: 
@@ -1551,18 +1551,18 @@ TextureImporter:
       name: TX Tileset Ground Rule_67
       rect:
         serializedVersion: 2
-        x: 96
-        y: 352
+        x: 192
+        y: 224
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d4359526bf5c654787044b7360bb602
+      spriteID: 8fe304b5889714045ba1d2f74a29de71
       internalID: 2052829708
       vertices: []
       indices: 
@@ -1572,18 +1572,18 @@ TextureImporter:
       name: TX Tileset Ground Rule_68
       rect:
         serializedVersion: 2
-        x: 128
-        y: 352
+        x: 256
+        y: 224
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a56de0c997952bf41a7114d08d0d15cd
+      spriteID: df456aa068fe5054fac1002791293d22
       internalID: -1036001618
       vertices: []
       indices: 
@@ -1593,18 +1593,18 @@ TextureImporter:
       name: TX Tileset Ground Rule_69
       rect:
         serializedVersion: 2
-        x: 160
-        y: 352
+        x: 320
+        y: 224
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a3e08457d16cdf41b7bb227434e5cfa
+      spriteID: 455d1658c02a132458e7c90e3f3cf68a
       internalID: 2102970348
       vertices: []
       indices: 
@@ -1614,18 +1614,18 @@ TextureImporter:
       name: TX Tileset Ground Rule_70
       rect:
         serializedVersion: 2
-        x: 192
-        y: 352
+        x: 384
+        y: 224
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 398e3d8b89ff91a46aa81ee842f3c174
+      spriteID: 7fc8442219fc5aa469fb622f2a759f31
       internalID: 1478967141
       vertices: []
       indices: 
@@ -1635,18 +1635,18 @@ TextureImporter:
       name: TX Tileset Ground Rule_71
       rect:
         serializedVersion: 2
-        x: 224
-        y: 352
+        x: 448
+        y: 224
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95a6e9246449b9e4dbbdc36f946d526d
+      spriteID: b71b789810a9cbc408732b244af2a3ad
       internalID: 1839729115
       vertices: []
       indices: 
@@ -1656,18 +1656,18 @@ TextureImporter:
       name: TX Tileset Ground Rule_72
       rect:
         serializedVersion: 2
-        x: 256
-        y: 352
+        x: 32
+        y: 192
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce01cb1c0b55af74d852fa006235a8e9
+      spriteID: 4850eea14a618b946a350480e3110968
       internalID: -269719877
       vertices: []
       indices: 
@@ -1677,18 +1677,18 @@ TextureImporter:
       name: TX Tileset Ground Rule_73
       rect:
         serializedVersion: 2
-        x: 288
-        y: 352
+        x: 96
+        y: 192
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e22aa7641be03a419d3f0505b1cc282
+      spriteID: c0663ce243f25cd4ab40d00c2c7aa8c3
       internalID: -16317295
       vertices: []
       indices: 
@@ -1698,18 +1698,18 @@ TextureImporter:
       name: TX Tileset Ground Rule_74
       rect:
         serializedVersion: 2
-        x: 320
-        y: 352
+        x: 160
+        y: 192
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95354764126d74c4f99b6b6ea9a20b69
+      spriteID: 3ef8bdec2e0f882458abdf667426c622
       internalID: -795985451
       vertices: []
       indices: 
@@ -1719,18 +1719,18 @@ TextureImporter:
       name: TX Tileset Ground Rule_75
       rect:
         serializedVersion: 2
-        x: 352
-        y: 352
+        x: 224
+        y: 192
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a375c87da8baf6e44870eaa3ada67abd
+      spriteID: 5ae08c4e4443acc40aa3d52ae7e9cb41
       internalID: 207546678
       vertices: []
       indices: 
@@ -1740,18 +1740,18 @@ TextureImporter:
       name: TX Tileset Ground Rule_76
       rect:
         serializedVersion: 2
-        x: 384
-        y: 352
+        x: 288
+        y: 192
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44f58efbb96f0e74683c0c1afc811006
+      spriteID: 96e3b35b47c5e5c478e90d0cf763db70
       internalID: -636003154
       vertices: []
       indices: 
@@ -1761,18 +1761,18 @@ TextureImporter:
       name: TX Tileset Ground Rule_77
       rect:
         serializedVersion: 2
-        x: 416
-        y: 352
+        x: 352
+        y: 192
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9aba7779dabcce4980c5c30b78d8f3c
+      spriteID: e52054f7a41276740b2d2b388ddd1b38
       internalID: -1702981280
       vertices: []
       indices: 
@@ -1782,18 +1782,18 @@ TextureImporter:
       name: TX Tileset Ground Rule_78
       rect:
         serializedVersion: 2
-        x: 448
-        y: 352
+        x: 416
+        y: 192
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0dbb595d36e62142bb869eaeb79484e
+      spriteID: e33c9a702063b074fb94f45044765dca
       internalID: 2002374323
       vertices: []
       indices: 
@@ -1804,17 +1804,17 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 480
-        y: 352
+        y: 192
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e2c16d2b459e2042b8a81cfb9904e2a
+      spriteID: a3a0771119d56214aa29059609e1fcd5
       internalID: -230534387
       vertices: []
       indices: 
@@ -1825,17 +1825,17 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 320
+        y: 160
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa01534851744604ebbeb746212174a8
+      spriteID: eb19da47274984c4d87a44c8ee38cbd3
       internalID: 142026595
       vertices: []
       indices: 
@@ -1845,18 +1845,18 @@ TextureImporter:
       name: TX Tileset Ground Rule_81
       rect:
         serializedVersion: 2
-        x: 32
-        y: 320
+        x: 64
+        y: 160
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7d120d451f53404c8524f5c4eee877c
+      spriteID: 40889e376c222b94caad82a71ffe433d
       internalID: -1231729169
       vertices: []
       indices: 
@@ -1866,18 +1866,18 @@ TextureImporter:
       name: TX Tileset Ground Rule_82
       rect:
         serializedVersion: 2
-        x: 64
-        y: 320
+        x: 128
+        y: 160
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b14392140ba73d045ab6c198a63890d3
+      spriteID: ee117a87c887e8d418be53ab83ed919d
       internalID: 624146596
       vertices: []
       indices: 
@@ -1887,18 +1887,18 @@ TextureImporter:
       name: TX Tileset Ground Rule_83
       rect:
         serializedVersion: 2
-        x: 96
-        y: 320
+        x: 192
+        y: 160
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7cc8716629aceae428097a6dbdf40b79
+      spriteID: 1fb072f610b83454db025343af33af5a
       internalID: 1759343696
       vertices: []
       indices: 
@@ -1908,18 +1908,18 @@ TextureImporter:
       name: TX Tileset Ground Rule_84
       rect:
         serializedVersion: 2
-        x: 128
-        y: 320
+        x: 256
+        y: 160
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 616fe7ba8baaca24a81f34c639c95f1a
+      spriteID: ce1a2f453a7a7d843b476d944103ec50
       internalID: 62371591
       vertices: []
       indices: 
@@ -1929,18 +1929,18 @@ TextureImporter:
       name: TX Tileset Ground Rule_85
       rect:
         serializedVersion: 2
-        x: 160
-        y: 320
+        x: 320
+        y: 160
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b8e3dae175d679499d8cb2a9f1b87ee
+      spriteID: baf20afba1d533541847683533ab30c7
       internalID: -1560976981
       vertices: []
       indices: 
@@ -1982,8 +1982,8 @@ TextureImporter:
       TX Tileset Ground Rule_39: -1430898425
       TX Tileset Ground Rule_0: 16299593
       TX Tileset Ground Rule_32: -1754162136
-      TX Tileset Ground Rule_85: -1560976981
       TX Tileset Ground Rule_84: 62371591
+      TX Tileset Ground Rule_85: -1560976981
       TX Tileset Ground Rule_27: -1107105566
       TX Tileset Ground Rule_48: -117579585
       TX Tileset Ground Rule_76: -636003154

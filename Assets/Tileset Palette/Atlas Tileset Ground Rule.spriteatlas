@@ -1,0 +1,216 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Atlas Tileset Ground Rule
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: -795985451, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: 207546678, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -636003154, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -1702981280, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: 1478967141, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: 1839729115, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -269719877, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -16317295, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: 2002374323, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -1231729169, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -230534387, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: 142026595, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: 1759343696, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: 624146596, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -996809677, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -1560976981, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -146854524, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: 62371591, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -222860194, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -740656903, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: 1002918444, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -104450306, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -284781536, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: 568722735, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -367367650, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -1701713956, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: 2052829708, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: 1844574026, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: 1150157778, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -1430898425, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: 1078361780, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: 1640222538, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -1248011993, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -641182356, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: 1759822617, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -2075306796, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -645699442, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -299593507, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: 2006117325, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: 2032765506, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -147524431, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -1545621230, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -1907538627, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -1754162136, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -351886055, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -117579585, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -1495449654, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: 378646766, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -1235923354, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: 1907108961, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -1475047600, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -49615005, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: 643808262, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: 1658721453, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: 2102970348, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: 150436756, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -3043854, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -1218566335, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: 483577019, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -1036001618, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: 11439967, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: 397365374, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: 1601450035, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -1107105566, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -552587626, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -1237974209, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -324211652, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: 2063602526, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: 1020410985, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -2147218916, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: 692541403, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: 819498987, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -1834807292, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: 1943379255, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: 1905326824, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -153706728, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -977156631, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -654760633, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: 1255037726, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: 328859470, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -1877461553, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: 16299593, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: 224605653, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -1247612461, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -1785419844, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  - {fileID: -977911144, guid: 1198b1391c61a104c9b0765cd2501a8b, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - TX Tileset Ground Rule_74
+  - TX Tileset Ground Rule_75
+  - TX Tileset Ground Rule_76
+  - TX Tileset Ground Rule_77
+  - TX Tileset Ground Rule_70
+  - TX Tileset Ground Rule_71
+  - TX Tileset Ground Rule_72
+  - TX Tileset Ground Rule_73
+  - TX Tileset Ground Rule_78
+  - TX Tileset Ground Rule_81
+  - TX Tileset Ground Rule_79
+  - TX Tileset Ground Rule_80
+  - TX Tileset Ground Rule_83
+  - TX Tileset Ground Rule_82
+  - TX Tileset Ground Rule_18
+  - TX Tileset Ground Rule_85
+  - TX Tileset Ground Rule_19
+  - TX Tileset Ground Rule_84
+  - TX Tileset Ground Rule_16
+  - TX Tileset Ground Rule_17
+  - TX Tileset Ground Rule_14
+  - TX Tileset Ground Rule_15
+  - TX Tileset Ground Rule_12
+  - TX Tileset Ground Rule_13
+  - TX Tileset Ground Rule_10
+  - TX Tileset Ground Rule_11
+  - TX Tileset Ground Rule_67
+  - TX Tileset Ground Rule_38
+  - TX Tileset Ground Rule_66
+  - TX Tileset Ground Rule_39
+  - TX Tileset Ground Rule_65
+  - TX Tileset Ground Rule_64
+  - TX Tileset Ground Rule_63
+  - TX Tileset Ground Rule_62
+  - TX Tileset Ground Rule_58
+  - TX Tileset Ground Rule_29
+  - TX Tileset Ground Rule_61
+  - TX Tileset Ground Rule_59
+  - TX Tileset Ground Rule_28
+  - TX Tileset Ground Rule_60
+  - TX Tileset Ground Rule_30
+  - TX Tileset Ground Rule_31
+  - TX Tileset Ground Rule_49
+  - TX Tileset Ground Rule_32
+  - TX Tileset Ground Rule_52
+  - TX Tileset Ground Rule_48
+  - TX Tileset Ground Rule_33
+  - TX Tileset Ground Rule_23
+  - TX Tileset Ground Rule_53
+  - TX Tileset Ground Rule_34
+  - TX Tileset Ground Rule_22
+  - TX Tileset Ground Rule_50
+  - TX Tileset Ground Rule_35
+  - TX Tileset Ground Rule_21
+  - TX Tileset Ground Rule_69
+  - TX Tileset Ground Rule_51
+  - TX Tileset Ground Rule_45
+  - TX Tileset Ground Rule_36
+  - TX Tileset Ground Rule_20
+  - TX Tileset Ground Rule_68
+  - TX Tileset Ground Rule_56
+  - TX Tileset Ground Rule_44
+  - TX Tileset Ground Rule_37
+  - TX Tileset Ground Rule_27
+  - TX Tileset Ground Rule_57
+  - TX Tileset Ground Rule_47
+  - TX Tileset Ground Rule_26
+  - TX Tileset Ground Rule_54
+  - TX Tileset Ground Rule_46
+  - TX Tileset Ground Rule_25
+  - TX Tileset Ground Rule_55
+  - TX Tileset Ground Rule_41
+  - TX Tileset Ground Rule_24
+  - TX Tileset Ground Rule_40
+  - TX Tileset Ground Rule_43
+  - TX Tileset Ground Rule_42
+  - TX Tileset Ground Rule_9
+  - TX Tileset Ground Rule_8
+  - TX Tileset Ground Rule_3
+  - TX Tileset Ground Rule_2
+  - TX Tileset Ground Rule_1
+  - TX Tileset Ground Rule_0
+  - TX Tileset Ground Rule_7
+  - TX Tileset Ground Rule_6
+  - TX Tileset Ground Rule_5
+  - TX Tileset Ground Rule_4
+  m_RenderDataMap: {}
+  m_Tag: Atlas Tileset Ground Rule
+  m_IsVariant: 0
