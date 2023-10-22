@@ -44,3 +44,6 @@ TagManager:
   - name: Grid
     uniqueID: 2450890619
     locked: 0
+  - name: Decor
+    uniqueID: 264844967
+    locked: 0
