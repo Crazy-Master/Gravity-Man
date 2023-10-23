@@ -9,6 +9,8 @@ public class PlayerMove : MonoBehaviour
     private int direction = 1;
     [SerializeField] private float _gravitationNow=1;
     [SerializeField] private float _speedMove;
+    private bool isJumping = false;
+  
 
     void Start()
     {
@@ -19,44 +21,48 @@ public class PlayerMove : MonoBehaviour
     
     void Update()
     {
+        Debug.Log(anim.GetBool("onPlace"));
         Run();
         SwapGravity();
+
     }
 
+    //void ResetAnimation()
+    //{
+    //    anim.SetBool("isLookUp", false);
+    //    anim.SetBool("isRun", false);
+    //    anim.SetBool("isJump", false);
+    //}
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        anim.SetBool("isJump", false);
+        anim.SetBool("onPlace", true);
     }
+
 
 
 
     void Run()
     {
-        transform.Translate(Vector3.right * _speedMove * Time.deltaTime);
+        transform.Translate(Vector3.right * _speedMove * Time.deltaTime,Space.World);
 
-        anim.SetBool("isRun", true);             
-        
+        if (anim.GetBool("onPlace"))
+            {
+            anim.SetBool("isJump", false);
+            anim.SetBool("isRun", true);
+        }
+        else { anim.SetBool("isRun", false); }
     }
 
     void SwapGravity()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && anim.GetBool("onPlace"))
         {
+            anim.SetBool("onPlace", false);
             rb.gravityScale = rb.gravityScale * -1;
+            //ResetAnimation();
+            anim.SetBool("isJump", true);
 
-            if (rb.gravityScale>0)
-            {                
-                transform.localScale = new Vector3(1, 1, 1);
-            }
-
-            if (rb.gravityScale < 0)
-            {               
-                transform.localScale = new Vector3(1, -1, 1);
             }
         }
-    }
-    
-
 }
-
