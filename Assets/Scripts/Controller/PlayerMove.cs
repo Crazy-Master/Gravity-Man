@@ -46,12 +46,21 @@ public class PlayerMove : MonoBehaviour
     {
         transform.Translate(Vector3.right * _speedMove * Time.deltaTime,Space.World);
 
-        if (anim.GetBool("onPlace"))
+        if (anim.GetBool("onPlace") && rb.gravityScale > 0)
             {
             anim.SetBool("isJump", false);
+            anim.SetBool("isRun1", false);
             anim.SetBool("isRun", true);
         }
         else { anim.SetBool("isRun", false); }
+
+        if (anim.GetBool("onPlace") && rb.gravityScale < 0)
+        {
+            anim.SetBool("isJump", false);
+            anim.SetBool("isRun", false);
+            anim.SetBool("isRun1", true);
+        }
+        else { anim.SetBool("isRun1", false); }
     }
 
     void SwapGravity()
