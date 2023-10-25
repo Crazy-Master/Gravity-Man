@@ -2,16 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMove : MonoBehaviour
+abstract class EntityMove : MonoBehaviour
+    
+
 {
     private Rigidbody2D rb;
     private Animator anim;
     private int direction = 1;
-    [SerializeField] private float _gravitationNow=1;
+    [SerializeField] private float _gravitationNow = 1;
     [SerializeField] private float _speedMove;
     private bool isJumping = false;
-    [SerializeField] private int _numderPlayer;
-  
+
 
     void Start()
     {
@@ -19,28 +20,13 @@ public class PlayerMove : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    
+
     void Update()
     {
         Debug.Log(anim.GetBool("onPlace"));
         Run();
+        SwapGravity();
 
-
-        switch (_numderPlayer)
-        {
-            case 1:
-                if (Input.GetMouseButtonDown(0) && anim.GetBool("onPlace"))
-                {
-                    SwapGravity();
-                }
-                break;
-            default:
-                if (Input.GetKeyDown(KeyCode.Space) && anim.GetBool("onPlace"))
-                {
-                    SwapGravity();
-                }
-                break;
-        }
     }    
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -49,12 +35,14 @@ public class PlayerMove : MonoBehaviour
     }
 
 
+
+
     void Run()
     {
-        transform.Translate(Vector3.right * _speedMove * Time.deltaTime,Space.World);
+        transform.Translate(Vector3.right * _speedMove * Time.deltaTime, Space.World);
 
         if (anim.GetBool("onPlace") && rb.gravityScale > 0)
-            {
+        {
             anim.SetBool("isJump", false);
             anim.SetBool("isRun1", false);
             anim.SetBool("isRun", true);
@@ -71,10 +59,13 @@ public class PlayerMove : MonoBehaviour
     }
 
     void SwapGravity()
-    {        
+    {
+        if (Input.GetMouseButtonDown(0) && anim.GetBool("onPlace"))
+        {
             anim.SetBool("onPlace", false);
             rb.gravityScale = rb.gravityScale * -1;
             anim.SetBool("isJump", true);
+
+        }
     }
-        
 }
