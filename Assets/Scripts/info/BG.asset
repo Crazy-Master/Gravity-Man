@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a0f10ee99da22d4b9c7150d0a65b99f, type: 3}
+  m_Name: BG
+  m_EditorClassIdentifier: 
+  structureSettings:
+  - scene: 0
+    layers:
+    - sprite: {fileID: 21300000, guid: 93964b48bd5a4d546882b6ee81a25e69, type: 3}
+      modifier: 1
+    - sprite: {fileID: 21300000, guid: a43e1c1792e197446970441262f17b85, type: 3}
+      modifier: 1
+    - sprite: {fileID: 21300000, guid: f1c2fba1dee3b504686b78cdc34ae415, type: 3}
+      modifier: 1
+    - sprite: {fileID: 21300000, guid: 8d70c8da0fe3f1a458e31d4acd0fe907, type: 3}
+      modifier: 1
+    - sprite: {fileID: 21300000, guid: 32655fef91e5f39499416420d9ad5efa, type: 3}
+      modifier: 1
+    - sprite: {fileID: 21300000, guid: 4d63dea249e280748a7e07a2f4da3f82, type: 3}
+      modifier: 1
+    - sprite: {fileID: 21300000, guid: 91ecc798e0d1f1541b2b6fadbaa3db88, type: 3}
+      modifier: 1
+  - scene: 1
+    layers:
+    - sprite: {fileID: 21300000, guid: ff0135d80d2406a41a05de8e7b2184d1, type: 3}
+      modifier: 1
+    - sprite: {fileID: 21300000, guid: 5a17c4d5e5d844f42bcd81ae5257011b, type: 3}
+      modifier: 0.9
+    - sprite: {fileID: 21300000, guid: db0e73ff04b96ec41a32e471f63c4a79, type: 3}
+      modifier: 0.8
+    - sprite: {fileID: 21300000, guid: 2d19347cc3b84f04b82016a8a56f8f15, type: 3}
+      modifier: 0.7
+  - scene: 2
+    layers:
+    - sprite: {fileID: 21300000, guid: a5273649d2513864ca7732852520af0d, type: 3}
+      modifier: 0.9
+    - sprite: {fileID: 21300000, guid: 6c11b8931e33bfc47bec2990a404cd65, type: 3}
+      modifier: 0.8
+    - sprite: {fileID: 21300000, guid: 4b564230970f5b7418fa1d20cdff2d0d, type: 3}
+      modifier: 0.7
+    - sprite: {fileID: 21300000, guid: 32e1cf637e24683489bac257adf60c19, type: 3}
+      modifier: 0.6
+  - scene: 3
+    layers:
+    - sprite: {fileID: 21300000, guid: c3a6e3c4bd872034c9c1a7f578631d23, type: 3}
+      modifier: 0.9
+    - sprite: {fileID: 21300000, guid: f66c6952cd0048340aa502ab74374d93, type: 3}
+      modifier: 0.8
+    - sprite: {fileID: 21300000, guid: 16c787e82820b364ab3d62cf876b405c, type: 3}
+      modifier: 0.7
+    - sprite: {fileID: 21300000, guid: 461a892442d42474a8af6772a0d97f1b, type: 3}
+      modifier: 0.6
