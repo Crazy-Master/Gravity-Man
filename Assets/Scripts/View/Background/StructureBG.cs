@@ -9,7 +9,11 @@ namespace View.Background
         MenuScene,
         GameScene1,
         GameScene2,
-        GameScene3
+        GameScene3,
+        GameScene4,
+        GameScene5,
+        GameScene6,
+        Titles
     }
 
     [System.Serializable]
