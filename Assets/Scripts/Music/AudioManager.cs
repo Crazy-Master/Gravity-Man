@@ -19,6 +19,7 @@ namespace Core.AudioSystem
             if (Instance) Destroy(gameObject);
             else Instance = this;
             _setting = new AudioSetting();
+            _setting.Init();
         }
 
         private void Start()

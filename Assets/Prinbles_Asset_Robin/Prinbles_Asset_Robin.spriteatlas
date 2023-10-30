@@ -1,0 +1,199 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Prinbles_Asset_Robin
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: WebGL
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 45
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 3
+      m_BuildTarget: Android
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 45
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: bf87d7cd9f37b784ca49bb42cbdee7d2, type: 3}
+    - {fileID: 2800000, guid: 58c3fafe945f5504bb0dcd84c19300f7, type: 3}
+    - {fileID: 2800000, guid: 8a9d1dbde620adb41989b0c87ca90495, type: 3}
+    - {fileID: 2800000, guid: a32688e8d10d9f2478c74fe94088dbd2, type: 3}
+    - {fileID: 2800000, guid: 85490ca3916ab2648bafad01dacd2ab5, type: 3}
+    - {fileID: 2800000, guid: 1ab979edb68caca4196fc4138385a65e, type: 3}
+    - {fileID: 2800000, guid: 2364146304101e2448e508c5e8d271a6, type: 3}
+    - {fileID: 2800000, guid: dc8646bb9e3964641b3ba2740cded60a, type: 3}
+    - {fileID: 2800000, guid: 712ed6a1ca644d949975b68c09c20c0c, type: 3}
+    - {fileID: 2800000, guid: fc2ead0deb0820d40ad43ff3b0e8f930, type: 3}
+    - {fileID: 2800000, guid: b86e80ae6b1a609419e1f6cc99a5d415, type: 3}
+    - {fileID: 2800000, guid: b633d44fe362a0a48a4d4b12ecb93398, type: 3}
+    - {fileID: 2800000, guid: bb4a790b5c196354ea89bce24bf27942, type: 3}
+    - {fileID: 2800000, guid: 1d0baf48dca85314ba851bce7adb321d, type: 3}
+    - {fileID: 2800000, guid: 4912ab3c927cecc4dbbef40b65e003eb, type: 3}
+    - {fileID: 2800000, guid: 36d2c77a704591f4aa695318ccf93c30, type: 3}
+    - {fileID: 2800000, guid: ec263448823d54f45a866fff8654e5cf, type: 3}
+    - {fileID: 2800000, guid: 7329f0e2ab83a2443b3aed3e63e81a4c, type: 3}
+    - {fileID: 2800000, guid: 780ab0ebb359d5d439609d4c1482f5cc, type: 3}
+    - {fileID: 2800000, guid: 0cac8f3cbcf054e4a86f8c806ca4ff42, type: 3}
+    - {fileID: 2800000, guid: da0b78a339047c3419dde1d3627dcbd7, type: 3}
+    - {fileID: 2800000, guid: 243337f1cefcb8442bfa3b0dd556310a, type: 3}
+    - {fileID: 2800000, guid: 99bfe700ae51a1d499589be6f126e849, type: 3}
+    - {fileID: 2800000, guid: f9e22661791b6744796f88e4c6369986, type: 3}
+    - {fileID: 2800000, guid: 49f6c25eb5bcb1840a8e8b1c19b7a63d, type: 3}
+    - {fileID: 2800000, guid: 4c694375231fd37438d1172ba5817822, type: 3}
+    - {fileID: 2800000, guid: 3e9d63f2a74eb184ea75591c7d7b51e5, type: 3}
+    - {fileID: 2800000, guid: 50453ce312e0eb14081355a963284fa7, type: 3}
+    - {fileID: 2800000, guid: c6b6615ddac499746889eb0ef754cbf8, type: 3}
+    - {fileID: 2800000, guid: 169457ca1bed5a740994c81686de5a1a, type: 3}
+    - {fileID: 2800000, guid: 367a72a13d31fe84da189e271721e409, type: 3}
+    - {fileID: 2800000, guid: c4c6e382869201f48a231dd8abb4e3e3, type: 3}
+    - {fileID: 2800000, guid: 248b7291894c3ca4ab2e177a117f4502, type: 3}
+    - {fileID: 2800000, guid: a4f5fe680df69064bb0b5cc3a47a746d, type: 3}
+    - {fileID: 2800000, guid: a9d5af3a0553fe742b1a721fc26c5084, type: 3}
+    - {fileID: 2800000, guid: 7605d528f06a9404594ccf27d24bc502, type: 3}
+    - {fileID: 2800000, guid: 79f528a77c09c8340b727a2aa6ba6603, type: 3}
+    - {fileID: 2800000, guid: 39b59666486d7ca48939ec275e435763, type: 3}
+    - {fileID: 2800000, guid: 144f77e53af3bde41869f883b98b0c76, type: 3}
+    - {fileID: 2800000, guid: acb66bf0df98d784ea8f02732d815da7, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 99bfe700ae51a1d499589be6f126e849, type: 3}
+  - {fileID: 21300000, guid: acb66bf0df98d784ea8f02732d815da7, type: 3}
+  - {fileID: 21300000, guid: f9e22661791b6744796f88e4c6369986, type: 3}
+  - {fileID: 21300000, guid: 248b7291894c3ca4ab2e177a117f4502, type: 3}
+  - {fileID: 21300000, guid: 367a72a13d31fe84da189e271721e409, type: 3}
+  - {fileID: 21300000, guid: 712ed6a1ca644d949975b68c09c20c0c, type: 3}
+  - {fileID: 21300000, guid: 243337f1cefcb8442bfa3b0dd556310a, type: 3}
+  - {fileID: 21300000, guid: c4c6e382869201f48a231dd8abb4e3e3, type: 3}
+  - {fileID: 21300000, guid: 7329f0e2ab83a2443b3aed3e63e81a4c, type: 3}
+  - {fileID: 21300000, guid: 3e9d63f2a74eb184ea75591c7d7b51e5, type: 3}
+  - {fileID: 21300000, guid: 2364146304101e2448e508c5e8d271a6, type: 3}
+  - {fileID: 21300000, guid: da0b78a339047c3419dde1d3627dcbd7, type: 3}
+  - {fileID: 21300000, guid: 85490ca3916ab2648bafad01dacd2ab5, type: 3}
+  - {fileID: 21300000, guid: 50453ce312e0eb14081355a963284fa7, type: 3}
+  - {fileID: 21300000, guid: 4c694375231fd37438d1172ba5817822, type: 3}
+  - {fileID: 21300000, guid: 144f77e53af3bde41869f883b98b0c76, type: 3}
+  - {fileID: 21300000, guid: 39b59666486d7ca48939ec275e435763, type: 3}
+  - {fileID: 21300000, guid: 79f528a77c09c8340b727a2aa6ba6603, type: 3}
+  - {fileID: 21300000, guid: 7605d528f06a9404594ccf27d24bc502, type: 3}
+  - {fileID: 21300000, guid: ec263448823d54f45a866fff8654e5cf, type: 3}
+  - {fileID: 21300000, guid: 1d0baf48dca85314ba851bce7adb321d, type: 3}
+  - {fileID: 21300000, guid: a4f5fe680df69064bb0b5cc3a47a746d, type: 3}
+  - {fileID: 21300000, guid: a32688e8d10d9f2478c74fe94088dbd2, type: 3}
+  - {fileID: 21300000, guid: a9d5af3a0553fe742b1a721fc26c5084, type: 3}
+  - {fileID: 21300000, guid: 36d2c77a704591f4aa695318ccf93c30, type: 3}
+  - {fileID: 21300000, guid: 169457ca1bed5a740994c81686de5a1a, type: 3}
+  - {fileID: 21300000, guid: bb4a790b5c196354ea89bce24bf27942, type: 3}
+  - {fileID: 21300000, guid: dc8646bb9e3964641b3ba2740cded60a, type: 3}
+  - {fileID: 21300000, guid: 780ab0ebb359d5d439609d4c1482f5cc, type: 3}
+  - {fileID: 21300000, guid: 4912ab3c927cecc4dbbef40b65e003eb, type: 3}
+  - {fileID: 21300000, guid: 0cac8f3cbcf054e4a86f8c806ca4ff42, type: 3}
+  - {fileID: 21300000, guid: fc2ead0deb0820d40ad43ff3b0e8f930, type: 3}
+  - {fileID: 21300000, guid: c6b6615ddac499746889eb0ef754cbf8, type: 3}
+  - {fileID: 21300000, guid: 8a9d1dbde620adb41989b0c87ca90495, type: 3}
+  - {fileID: 21300000, guid: bf87d7cd9f37b784ca49bb42cbdee7d2, type: 3}
+  - {fileID: 21300000, guid: 1ab979edb68caca4196fc4138385a65e, type: 3}
+  - {fileID: 21300000, guid: 49f6c25eb5bcb1840a8e8b1c19b7a63d, type: 3}
+  - {fileID: 21300000, guid: b86e80ae6b1a609419e1f6cc99a5d415, type: 3}
+  - {fileID: 21300000, guid: 58c3fafe945f5504bb0dcd84c19300f7, type: 3}
+  - {fileID: 21300000, guid: b633d44fe362a0a48a4d4b12ecb93398, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Replay
+  - Russian
+  - Shield
+  - Arrow
+  - Active
+  - Money
+  - Play
+  - Unactive
+  - Levels
+  - Spark
+  - Dummy
+  - Pause
+  - Default
+  - Star
+  - SoundOn
+  - English
+  - Unactive
+  - Active
+  - NameBack
+  - Home
+  - ArrowRight
+  - Back
+  - Hover
+  - ButtonBack
+  - Heart
+  - Dummy
+  - ArrowRight-Thin
+  - Dummy
+  - Locker
+  - Cross
+  - Mark
+  - Time
+  - settings
+  - Default
+  - Background
+  - Hover
+  - SoundOff
+  - ArrowLeft-Thin
+  - Line
+  - ArrowLeft
+  m_RenderDataMap: {}
+  m_Tag: Prinbles_Asset_Robin
+  m_IsVariant: 0

@@ -74,5 +74,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2abc837157c2a284c849bc062fc262b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _backgroundCreator: {fileID: 0}
   _structureBg: {fileID: 11400000, guid: 7e2b0bb5280dfe14dab56a47c82d5690, type: 2}
+  _windowDataBase: {fileID: 11400000, guid: 41f9654e0ed5d0f40a31e8e22a8ec681, type: 2}
+  _audioDataBase: {fileID: 11400000, guid: d21236e827b92c54ea0d95288e27b324, type: 2}
