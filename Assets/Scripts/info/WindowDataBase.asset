@@ -16,7 +16,7 @@ MonoBehaviour:
   - eWindow: 0
     windowObject: {fileID: 5118806260266904623, guid: 0600a4605023d494bae077c8e119eed8, type: 3}
   - eWindow: 1
-    windowObject: {fileID: 0}
+    windowObject: {fileID: 5118806260266904623, guid: 9a5ba251079da924c993629974b762e4, type: 3}
   - eWindow: 2
     windowObject: {fileID: 5118806260266904623, guid: 3c6680796266f4f4b985ea5848bd377a, type: 3}
   - eWindow: 3
@@ -28,6 +28,6 @@ MonoBehaviour:
   - eWindow: 6
     windowObject: {fileID: 0}
   - eWindow: 7
-    windowObject: {fileID: 0}
+    windowObject: {fileID: 5118806260266904623, guid: 5f81abf5a07114647a13c0f594867901, type: 3}
   - eWindow: 8
-    windowObject: {fileID: 0}
+    windowObject: {fileID: 5118806260266904623, guid: b035e46d3d1a6f0488208392facdf0be, type: 3}

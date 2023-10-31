@@ -97,6 +97,7 @@ SpriteAtlas:
     - {fileID: 2800000, guid: 3e9d63f2a74eb184ea75591c7d7b51e5, type: 3}
     - {fileID: 2800000, guid: 50453ce312e0eb14081355a963284fa7, type: 3}
     - {fileID: 2800000, guid: c6b6615ddac499746889eb0ef754cbf8, type: 3}
+    - {fileID: 2800000, guid: 0d2b5b8ddd403f84ca123c76c3ad9124, type: 3}
     - {fileID: 2800000, guid: 169457ca1bed5a740994c81686de5a1a, type: 3}
     - {fileID: 2800000, guid: 367a72a13d31fe84da189e271721e409, type: 3}
     - {fileID: 2800000, guid: c4c6e382869201f48a231dd8abb4e3e3, type: 3}
@@ -146,6 +147,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 0cac8f3cbcf054e4a86f8c806ca4ff42, type: 3}
   - {fileID: 21300000, guid: fc2ead0deb0820d40ad43ff3b0e8f930, type: 3}
   - {fileID: 21300000, guid: c6b6615ddac499746889eb0ef754cbf8, type: 3}
+  - {fileID: 21300000, guid: 0d2b5b8ddd403f84ca123c76c3ad9124, type: 3}
   - {fileID: 21300000, guid: 8a9d1dbde620adb41989b0c87ca90495, type: 3}
   - {fileID: 21300000, guid: bf87d7cd9f37b784ca49bb42cbdee7d2, type: 3}
   - {fileID: 21300000, guid: 1ab979edb68caca4196fc4138385a65e, type: 3}
@@ -187,6 +189,7 @@ SpriteAtlas:
   - Mark
   - Time
   - settings
+  - AD
   - Default
   - Background
   - Hover
