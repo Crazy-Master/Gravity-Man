@@ -7,24 +7,21 @@ namespace Core.WindowSystem
 {
     public class WindowManager : MonoBehaviour
     {
-        private WindowDataBase _windowDataBase;
+        private StructureWindow _structureWindow;
         private Transform _canvas;
         private Stack<GameObject> _stackWindows = new Stack<GameObject>();
         [SerializeField] private EWindow _firstWindow;
+        [SerializeField] private Bootstrap _bootstrap;
         
         [Inject]
-        private void Construct(WindowDataBase structure) => _windowDataBase = structure;
+        private void Construct(StructureWindow structure) => _structureWindow = structure;
 
         private void Awake()
         {
             _canvas = gameObject.GetComponent<Canvas>().transform; 
-            Init();
-        }
-
-        private void Init()
-        {
-            var obj = Instantiate(_windowDataBase.GetWindow(_firstWindow),_canvas);
-            obj.GetComponent<WindowController>().Init(this);
+            
+            var obj = Instantiate(_structureWindow.GetWindow(_firstWindow),_canvas);
+            obj.GetComponent<WindowController>().Init(this, _bootstrap);
             _stackWindows.Push(obj);
         }
 
@@ -32,8 +29,8 @@ namespace Core.WindowSystem
 
         public void OpenWindow(GetEWindow window)
         {
-            var obj = Instantiate(_windowDataBase.GetWindow(window.eWindow), _canvas);
-            obj.GetComponent<WindowController>().Init(this);
+            var obj = Instantiate(_structureWindow.GetWindow(window.eWindow), _canvas);
+            obj.GetComponent<WindowController>().Init(this, _bootstrap);
             _stackWindows.Peek().SetActive(false);
             _stackWindows.Push(obj);
         }
@@ -53,20 +50,14 @@ namespace Core.WindowSystem
             OpenWindow(EWindow.LoadingManu).GetComponent<SceneLoader>().LoadSceneAsync(scene);
         }
 
-        public void LoadScene()
-        {
-            var scene = SceneManager.GetActiveScene().name;
-            OpenWindow(EWindow.LoadingManu).GetComponent<SceneLoader>().LoadSceneAsync(scene);
-        }
-
         private GameObject OpenWindow(EWindow window)
         {
-            var obj = Instantiate(_windowDataBase.GetWindow(window), _canvas);
+            var obj = Instantiate(_structureWindow.GetWindow(window), _canvas);
             _stackWindows.Peek().SetActive(false);
             return obj;
         }
 
         #endregion
-        
+
     }
 }

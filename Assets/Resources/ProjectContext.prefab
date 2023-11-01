@@ -75,5 +75,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _structureBg: {fileID: 11400000, guid: 7e2b0bb5280dfe14dab56a47c82d5690, type: 2}
-  _windowDataBase: {fileID: 11400000, guid: 41f9654e0ed5d0f40a31e8e22a8ec681, type: 2}
+  _structureWindow: {fileID: 11400000, guid: 41f9654e0ed5d0f40a31e8e22a8ec681, type: 2}
+  _structureLoadLevel: {fileID: 11400000, guid: d0c8f8067441ac146845c18a1da090c9, type: 2}
   _audioDataBase: {fileID: 11400000, guid: d21236e827b92c54ea0d95288e27b324, type: 2}

@@ -7,12 +7,14 @@ using Zenject;
 public class GlobalInstaller : MonoInstaller
 {
     [SerializeField] private StructureBG _structureBg;
-    [SerializeField] private WindowDataBase _windowDataBase;
+    [SerializeField] private StructureWindow _structureWindow;
+    [SerializeField] private StructureLoadLevel _structureLoadLevel;
     [SerializeField] private AudioDataBase _audioDataBase;
     public override void InstallBindings()
     {
         BindBackground();
         BindWindow();
+        BindLevel();
     }
     private void BindBackground()
     {
@@ -21,7 +23,11 @@ public class GlobalInstaller : MonoInstaller
     }
     private void BindWindow()
     {
-        Container.Bind<WindowDataBase>().FromInstance(_windowDataBase);
-        //BackgroundCreator background = Container.InstantiatePrefabForComponent<BackgroundCreator>(_backgroundCreator);
+        Container.Bind<StructureWindow>().FromInstance(_structureWindow);
+    }
+    
+    private void BindLevel()
+    {
+        Container.Bind<StructureLoadLevel>().FromInstance(_structureLoadLevel);
     }
 }

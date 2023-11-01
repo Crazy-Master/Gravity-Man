@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
@@ -11,14 +9,15 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float _speedMove;
     private bool isJumping = false;
     [SerializeField] private int _numderPlayer;
-  
+    
+    
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
-
+    
     
     void Update()
     {
@@ -54,7 +53,7 @@ public class PlayerMove : MonoBehaviour
         transform.Translate(Vector3.right * _speedMove * Time.deltaTime,Space.World);
 
         if (anim.GetBool("onPlace") && rb.gravityScale > 0)
-            {
+        {
             anim.SetBool("isJump", false);
             anim.SetBool("isRun1", false);
             anim.SetBool("isRun", true);
@@ -76,5 +75,6 @@ public class PlayerMove : MonoBehaviour
             rb.gravityScale = rb.gravityScale * -1;
             anim.SetBool("isJump", true);
     }
-        
+
+    
 }

@@ -25,7 +25,7 @@ namespace Core.WindowSystem
  }
  
  [CreateAssetMenu(fileName = "WindowDataBase", menuName = "Settings/WindowDataBase", order = 0)]
- public class WindowDataBase : ScriptableObject
+ public class StructureWindow : ScriptableObject
  {
      [SerializeField] private List<SettingWindow> _windowSettings;
      
