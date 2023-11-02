@@ -8,7 +8,10 @@ using UnityEngine;
     {
         public GameObject grid;
         public GameObject decor;
+        public float gravity;
+        [Space] [Header("Player")] 
         public Vector3 posPlayer;
+        public float speed;
     }
 
 [CreateAssetMenu(fileName = "LevelDataBase", menuName = "Settings/LevelDataBase", order = 0)]

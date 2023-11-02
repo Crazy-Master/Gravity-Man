@@ -107,9 +107,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dccea11c83025a429e14aa069d8437c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gravitationNow: 1
-  _speedMove: 3
-  _numderPlayer: 1
 --- !u!114 &6052328170051592125
 MonoBehaviour:
   m_ObjectHideFlags: 0

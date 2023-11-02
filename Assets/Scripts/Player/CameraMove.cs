@@ -16,9 +16,12 @@ public class CameraMove : MonoBehaviour
     
     public void LateUpdate()
     {
-        Vector3 cameraPosition = new Vector3(_player1.position.x + offset.x, transform.position.y , transform.position.z);
-        Vector3 smoothedPosition = Vector3.Lerp(transform.position, cameraPosition, smoothSpeed);
+        if (_player1 != null)
+        {
+            Vector3 cameraPosition = new Vector3(_player1.position.x + offset.x, transform.position.y , transform.position.z);
+            Vector3 smoothedPosition = Vector3.Lerp(transform.position, cameraPosition, smoothSpeed);
 
-        transform.position = smoothedPosition;
+            transform.position = smoothedPosition;
+        }
     }
 }

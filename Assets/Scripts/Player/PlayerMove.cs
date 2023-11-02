@@ -1,80 +1,107 @@
 using UnityEngine;
 
-public class PlayerMove : MonoBehaviour
+namespace Player
 {
-    private Rigidbody2D rb;
-    private Animator anim;
-    private int direction = 1;
-    [SerializeField] private float _gravitationNow=1;
-    [SerializeField] private float _speedMove;
-    private bool isJumping = false;
-    [SerializeField] private int _numderPlayer;
-    
-    
-
-    void Start()
+    public class PlayerMove : MonoBehaviour
     {
-        rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
-    }
-    
-    
-    void Update()
-    {
-        Debug.Log(anim.GetBool("onPlace"));
-        Run();
+        private Rigidbody2D rb;
+        private Animator anim;
+        private int direction = 1;
+        private float _speedMove = 3;
+        private int _numderPlayer;
+        private PlayerController _playerController;
 
 
-        switch (_numderPlayer)
+
+        private void Start()
         {
-            case 1:
-                if (Input.GetMouseButtonDown(0) && anim.GetBool("onPlace"))
-                {
-                    SwapGravity();
-                }
-                break;
-            default:
-                if (Input.GetKeyDown(KeyCode.Space) && anim.GetBool("onPlace"))
-                {
-                    SwapGravity();
-                }
-                break;
+            rb = GetComponent<Rigidbody2D>();
+            anim = GetComponent<Animator>();
         }
-    }    
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        anim.SetBool("onPlace", true);
-    }
-
-
-    void Run()
-    {
-        transform.Translate(Vector3.right * _speedMove * Time.deltaTime,Space.World);
-
-        if (anim.GetBool("onPlace") && rb.gravityScale > 0)
+        public void Init(float speed, int numderPlayer, PlayerController playerController)
         {
-            anim.SetBool("isJump", false);
-            anim.SetBool("isRun1", false);
-            anim.SetBool("isRun", true);
+            _speedMove = speed;
+            _numderPlayer = numderPlayer;
+            _playerController = playerController;
         }
-        else { anim.SetBool("isRun", false); }
 
-        if (anim.GetBool("onPlace") && rb.gravityScale < 0)
+        void Update()
         {
-            anim.SetBool("isJump", false);
-            anim.SetBool("isRun", false);
-            anim.SetBool("isRun1", true);
-        }
-        else { anim.SetBool("isRun1", false); }
-    }
+            Debug.Log(anim.GetBool("onPlace"));
+            Run();
 
-    void SwapGravity()
-    {        
+
+            switch (_numderPlayer)
+            {
+                case 1:
+                    if (Input.GetMouseButtonDown(0) && _playerController.Ground)
+                    {
+                        SwapGravity();
+                    }
+
+                    break;
+                default:
+                    if (Input.GetKeyDown(KeyCode.Space) && _playerController.Ground)
+                    {
+                        SwapGravity();
+                    }
+
+                    break;
+            }
+        }
+
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            anim.SetBool("onPlace", true);
+        }
+
+
+        void Run()
+        {
+            transform.Translate(Vector3.right * _speedMove * Time.deltaTime, Space.World);
+
+            if (anim.GetBool("onPlace") && rb.gravityScale > 0)
+            {
+                anim.SetBool("isJump", false);
+                anim.SetBool("isRun1", false);
+                anim.SetBool("isRun", true);
+            }
+            else
+            {
+                anim.SetBool("isRun", false);
+            }
+
+            if (anim.GetBool("onPlace") && rb.gravityScale < 0)
+            {
+                anim.SetBool("isJump", false);
+                anim.SetBool("isRun", false);
+                anim.SetBool("isRun1", true);
+            }
+            else
+            {
+                anim.SetBool("isRun1", false);
+            }
+        }
+
+        void SwapGravity()
+        {
             anim.SetBool("onPlace", false);
-            rb.gravityScale = rb.gravityScale * -1;
+            _playerController.SetGravity(_playerController.Gravity*-1);
             anim.SetBool("isJump", true);
+        }
+        #region MaximumSpeedLimit
+
+        private void FixedUpdate()
+        {
+            if (rb.velocity.magnitude >= _speedMove)
+            {
+                rb.velocity = rb.velocity.normalized * _speedMove;
+            }
+        }
+
+        #endregion
+
     }
 
-    
 }

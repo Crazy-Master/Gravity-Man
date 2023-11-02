@@ -1,8 +1,9 @@
 using System;
-using Core.WindowSystem;
+using Player;
 using Unity.VisualScripting;
 using UnityEngine;
 using Zenject;
+
 
 public class Bootstrap : MonoBehaviour
 {
@@ -10,17 +11,18 @@ public class Bootstrap : MonoBehaviour
     [SerializeField] private GameObject _player;
     [SerializeField] private Camera _camera;
     private WorldController _worldController = new WorldController();
-    public event Action OnRestartGame;
-    public event Action OnResurrectGame;
-    
+    public SavePlayer SavePlayer;
+    private SettingLevel _settingLevel;
+    private int level = 1; //загрузка из яндекса
+
     [Inject]
     private void Construct(StructureLoadLevel structure) => _structureLL = structure;
 
     private void Awake()
     {
-        int level = 1;
-        GenerationLevel(level); //загрузка из яндекса
-        GenerationPlayer(level);
+        GenerationLevel(level);
+        _settingLevel = _structureLL.GetLevel(level);
+        GenerationPlayer(_settingLevel.posPlayer, _settingLevel.gravity, _settingLevel.speed);
     }
 
     private void GenerationLevel(int level)
@@ -30,24 +32,19 @@ public class Bootstrap : MonoBehaviour
         Instantiate(settingLevel.decor);
     }
 
-    private void GenerationPlayer(int level)
+    private void GenerationPlayer(Vector3 startPos, float gravity, float speed)
     {
-        var startPos = _structureLL.GetLevel(level).posPlayer;
-        _player = Instantiate(_player,startPos, Quaternion.identity);
-        _player.GetComponent<PlayerController>().Init(this,startPos);
-        _camera.AddComponent<CameraMove>().Init(_player.transform);
+        var player = Instantiate(_player,startPos, Quaternion.identity);
+        var playerController = player.GetComponent<PlayerController>();
+        playerController.Init(_worldController, gravity);
+        player.GetComponent<PlayerMove>().Init(speed, 1, playerController);
+        _camera.AddComponent<CameraMove>().Init(player.transform);
+        _worldController.Init(player);
     }
+    
 
-    public void Restart()
+    public WorldController GetWorldController()
     {
-        _player.SetActive(true);
-        OnRestartGame?.Invoke();
+        return _worldController;
     }
-    
-    public void Resurrect()
-    {
-        _player.SetActive(true);
-        OnResurrectGame?.Invoke();
-    }
-    
 }

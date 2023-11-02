@@ -4,12 +4,12 @@ using UnityEngine;
 public class WindowController : MonoBehaviour
 {
     private WindowManager _windowManager;
-    private Bootstrap _bootstrap;
+    private WorldController _worldController;
 
-    public void Init(WindowManager windowManager, Bootstrap bootstrap)
+    public void Init(WindowManager windowManager, WorldController worldController)
     {
         _windowManager = windowManager;
-        _bootstrap = bootstrap;
+        _worldController = worldController;
     }
 
     public void OpenWindow(GetEWindow eWindow)
@@ -30,11 +30,11 @@ public class WindowController : MonoBehaviour
     public void Restart()
     {
         _windowManager.CloseWindow();
-        _bootstrap.Restart();
+        _worldController.Restart();
     }
     public void Resurrect()
     {
         _windowManager.CloseWindow();
-        _bootstrap.Resurrect();
+        _worldController.Resurrect();
     }
 }
