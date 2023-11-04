@@ -23,13 +23,16 @@ namespace Player
         private SavePlayer _resurrectSave;
         private WorldController _worldController;
         private Rigidbody2D _rigidbody2D;
+        public event Action<float> OnChangeGravity;
+        public event Action<bool> OnChangeGround;
         public float Gravity {private set; get; }
         public bool Ground {private set; get; }
+        private bool PreviousGround;
 
         void Awake()
         {
             _rigidbody2D = GetComponent<Rigidbody2D>();
-            Ground = true;
+            SetGround(true);
         }
         
         public void Init(WorldController worldController, float gravity)
@@ -60,10 +63,21 @@ namespace Player
 
         private void Update()
         {
-            Ground = Physics2D.OverlapCircle(_groundCheck.position, 0.1f, _groundLayer);
+            
+            bool ground =Physics2D.OverlapCircle(_groundCheck.position, 0.1f, _groundLayer);
+            if (ground != PreviousGround)
+            {
+                SetGround(ground);
+            }
             Debug.Log("Ground"+Ground);
         }
 
+        public void SetGround(bool ground)
+        {
+            PreviousGround = Ground;
+            Ground = ground;
+            OnChangeGround?.Invoke(ground);
+        }
         /*public void OnCollisionEnter2D(Collision2D other)
         {
             switch (other.gameObject.tag)
@@ -91,6 +105,7 @@ namespace Player
         {
             _rigidbody2D.gravityScale = gravity;
             Gravity = gravity;
+            OnChangeGravity?.Invoke(gravity);
         }
         
         
