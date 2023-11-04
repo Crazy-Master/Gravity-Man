@@ -6,12 +6,12 @@ namespace Core.WindowSystem
 {
  public enum EWindow
  { 
-     MineManu,
-     LevelsManu,
-     LoadingManu,
-     GameManu,
+     MineMenu,
+     LevelsMenu,
+     LoadingMenu,
+     GameMenu,
      PauseMenu,
-     SettingManu,
+     SettingMenu,
      ADMenu,
      LevelComplete,
      GameOver

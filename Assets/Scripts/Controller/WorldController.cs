@@ -1,11 +1,19 @@
 using System;
 using UnityEngine;
 
+public enum EWorld
+{ 
+    MineMenu,
+    OnePlayerGame,
+    TwoPlayerGame
+}
+
 public class WorldController
 {
     private GameObject _player;
     public event Action OnRestartGame;
     public event Action OnResurrectGame;
+    public event Action OnLevelComplete;
     public event Action OnGameOver;
 
     public void Init(GameObject player)
@@ -29,4 +37,9 @@ public class WorldController
     {
         OnGameOver?.Invoke();
     }
+    public void LevelComplete()
+    {
+        OnLevelComplete?.Invoke();
+    }
+    
 }

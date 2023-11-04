@@ -17,6 +17,8 @@ namespace Player
 
     public class PlayerController : MonoBehaviour
     {
+        [SerializeField] private Transform _groundCheck;
+        [SerializeField] private LayerMask _groundLayer;
         private SavePlayer _restartSave; //разобраться с гравитацией!!!
         private SavePlayer _resurrectSave;
         private WorldController _worldController;
@@ -27,7 +29,6 @@ namespace Player
         void Awake()
         {
             _rigidbody2D = GetComponent<Rigidbody2D>();
-            StartCoroutine(SetOldPosition());
             Ground = true;
         }
         
@@ -47,15 +48,29 @@ namespace Player
                case "Dead":
                    DeadPlayer();
                    break;
+               case "Resurrect":
+                   CheckPointController point = other.GetComponent<CheckPointController>();
+                   _resurrectSave.SetData(point.GetPosition(), Math.Abs(Gravity) * point.GetGravity());
+                   break;
+               case "LevelComplete":
+                   _worldController.LevelComplete();
+                   break;
             }
         }
 
-        public void OnCollisionEnter2D(Collision2D other)
+        private void Update()
+        {
+            Ground = Physics2D.OverlapCircle(_groundCheck.position, 0.1f, _groundLayer);
+            Debug.Log("Ground"+Ground);
+        }
+
+        /*public void OnCollisionEnter2D(Collision2D other)
         {
             switch (other.gameObject.tag)
             {
                 case "Ground":
-                    Ground = true;
+                    Ground = Physics2D.OverlapCircle(_groundCheck.position, 0.2f, _groundLayer);
+                    Debug.Log("Ground"+Ground);
                     break;
             }
         }
@@ -66,9 +81,10 @@ namespace Player
             {
                 case "Ground":
                     Ground = false;
+                    Debug.Log("Ground"+Ground);
                     break;
             }
-        }
+        }*/
 
 
         public void SetGravity(float gravity)
@@ -81,7 +97,7 @@ namespace Player
     
         #region InteractionPauseMenu
 
-        private IEnumerator SetOldPosition()
+        /*private IEnumerator SetOldPosition()
         {
             if (Ground)
             {
@@ -93,27 +109,26 @@ namespace Player
                 yield return new WaitForSeconds(1f); 
             }
             StartCoroutine(SetOldPosition());
-        }
+        }*/
 
         private void Restart()
         {
             gameObject.transform.position = _restartSave.Position;
-            _rigidbody2D.gravityScale = _restartSave.Gravity;
+            SetGravity(_restartSave.Gravity);
             _rigidbody2D.velocity = Vector2.zero;
-            StartCoroutine(SetOldPosition());
+            ChangeScaleDir();
         }
         
         private void Resurrect() //переделать на чекпоинты???
         {
             gameObject.transform.position = _resurrectSave.Position;
-            _rigidbody2D.gravityScale = _resurrectSave.Gravity;
+            SetGravity(_resurrectSave.Gravity);
             _rigidbody2D.velocity = Vector2.zero;
-            StartCoroutine(SetOldPosition());
+            ChangeScaleDir();
         }
         
         private void DeadPlayer()
         {
-            StopCoroutine(SetOldPosition());
             _worldController.GameOver();
             gameObject.SetActive(false);
         }
@@ -124,6 +139,20 @@ namespace Player
         {
             _worldController.OnRestartGame -= Restart;
             _worldController.OnResurrectGame -= Resurrect;
+        }
+        
+        public void ChangeScaleDir()
+        {
+            var localScale = transform.localScale;
+            if (Gravity > 0)
+            {
+                transform.localScale = new Vector3(localScale.x, Math.Abs(localScale.y), localScale.z);
+            }
+
+            if (Gravity < 0)
+            {
+                transform.localScale = new Vector3(localScale.x, -Math.Abs(localScale.y), localScale.z);
+            }
         }
         
     }

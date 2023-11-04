@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ChangeDirection : MonoBehaviour
@@ -12,6 +10,7 @@ public class ChangeDirection : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();       
     }
+
     public void ChangeScaleDir()
     {
        

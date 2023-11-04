@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8027522280504284220}
   - component: {fileID: 118089171670336439}
   m_Layer: 5
-  m_Name: SettingButton
+  m_Name: PauseButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 679afe7a968401946a8aceb965f1171f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eWindow: 8
+  eWindow: 4
 --- !u!1 &2907791384859850070
 GameObject:
   m_ObjectHideFlags: 0

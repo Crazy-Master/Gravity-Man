@@ -24,7 +24,7 @@ public class WindowController : MonoBehaviour
     
     public void LoadScene(string scene)
     {
-        _windowManager.LoadScene(scene);
+        //_windowManager.LoadScene(scene);
     }
     
     public void Restart()

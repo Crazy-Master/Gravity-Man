@@ -28,7 +28,7 @@ namespace Player
 
         void Update()
         {
-            Debug.Log(anim.GetBool("onPlace"));
+            //Debug.Log(anim.GetBool("onPlace"));
             Run();
 
 

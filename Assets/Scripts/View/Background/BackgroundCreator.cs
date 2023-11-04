@@ -1,4 +1,4 @@
-using Unity.VisualScripting;
+using System.Collections.Generic;
 using UnityEngine;
 using View.Background;
 using Zenject;
@@ -11,20 +11,31 @@ public class BackgroundCreator : MonoBehaviour
     private StructureBG _structureBg;
     private const int NumberSprites = 3; 
     private Vector3 _topRightCorner;
-
+    private List<GameObject> _layers = new List<GameObject>();
+    
     [Inject]
     private void Construct(StructureBG structure) => _structureBg = structure;
 
     private void Start()
     {
-        CreateLayersBackground();
+        CreateLayersBackground(_scene);
     }
 
-    private void CreateLayersBackground()
+    public void Restart(EScene eScene)
+    {
+        for (int i = 0; i < _layers.Count; i++)
+        {
+            Destroy(_layers[i]);
+        }
+        _layers.Clear();
+        CreateLayersBackground(eScene);
+    }
+
+    private void CreateLayersBackground(EScene eScene)
     {
         if (Camera.main is not null) _topRightCorner = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
 
-        var BackgroundLayer = _structureBg.GetBackgroundLayer(_scene);
+        var BackgroundLayer = _structureBg.GetBackgroundLayer(eScene);
         for (int i = 0; i < BackgroundLayer.Length; i++)
         {
             var comp = CreateLayer(transform);
@@ -36,6 +47,7 @@ public class BackgroundCreator : MonoBehaviour
     private EndlessScrolling CreateLayer(Transform valu)
     {
         var LayerBG = new GameObject("LayerBG");
+        _layers.Add(LayerBG);
         LayerBG.transform.SetParent(valu);
         var comp = LayerBG.AddComponent<EndlessScrolling>();
         SpriteRenderer[] spriteRenderers = new SpriteRenderer[NumberSprites];

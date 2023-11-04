@@ -2,46 +2,70 @@ using System;
 using Player;
 using Unity.VisualScripting;
 using UnityEngine;
+using View.Background;
 using Zenject;
 
 
 public class Bootstrap : MonoBehaviour
 {
     private StructureLoadLevel _structureLL;
-    [SerializeField] private GameObject _player;
+    [SerializeField] private GameObject _prefabPlayer;
     [SerializeField] private Camera _camera;
+    [SerializeField] private GameObject _backgroundParallax;
     private WorldController _worldController = new WorldController();
-    public SavePlayer SavePlayer;
     private SettingLevel _settingLevel;
+    [SerializeField] private BackgroundCreator _backgroundCreator;
+    
+    private GameObject _structureLevel;
+    private GameObject _player;
+    private GameObject _playerTwo;
+    
     private int level = 1; //загрузка из яндекса
 
     [Inject]
     private void Construct(StructureLoadLevel structure) => _structureLL = structure;
 
-    private void Awake()
+    private void Start()
     {
-        GenerationLevel(level);
-        _settingLevel = _structureLL.GetLevel(level);
-        GenerationPlayer(_settingLevel.posPlayer, _settingLevel.gravity, _settingLevel.speed);
+        StartLevel(1);
     }
 
-    private void GenerationLevel(int level)
+    public void StartMainMenu()
     {
-        var settingLevel = _structureLL.GetLevel(level);
-        Instantiate(settingLevel.grid);
-        Instantiate(settingLevel.decor);
+        DestroyLevel();
+        _backgroundCreator.Restart(EScene.MenuScene);
+    }
+
+    public void StartLevel(int level)
+    {
+        _settingLevel = _structureLL.GetLevel(level);
+        _backgroundCreator.Restart(_settingLevel.BackgroundScene);
+        GenerationLevel();
+        GenerationPlayer(_settingLevel.posPlayer, _settingLevel.gravity, _settingLevel.speed);
+    }
+    private void GenerationLevel()
+    {
+        _structureLevel = new GameObject("StructureLevel");
+        _structureLevel.transform.SetParent(Instantiate(_settingLevel.grid).transform);
+        _structureLevel.transform.SetParent(Instantiate(_settingLevel.decor).transform);
     }
 
     private void GenerationPlayer(Vector3 startPos, float gravity, float speed)
     {
-        var player = Instantiate(_player,startPos, Quaternion.identity);
-        var playerController = player.GetComponent<PlayerController>();
+        _player = Instantiate(_prefabPlayer,startPos, Quaternion.identity);
+        var playerController = _player.GetComponent<PlayerController>();
         playerController.Init(_worldController, gravity);
-        player.GetComponent<PlayerMove>().Init(speed, 1, playerController);
-        _camera.AddComponent<CameraMove>().Init(player.transform);
-        _worldController.Init(player);
+        _player.GetComponent<PlayerMove>().Init(speed, 1, playerController);
+        _camera.AddComponent<CameraMove>().Init(_player.transform);
+        _worldController.Init(_player);
     }
-    
+
+    private void DestroyLevel()
+    {
+        Destroy(_structureLevel);
+        Destroy(_player);
+        if (_playerTwo != null) Destroy(_player);
+    }
 
     public WorldController GetWorldController()
     {
