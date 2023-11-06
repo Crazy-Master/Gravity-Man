@@ -3,7 +3,6 @@ using UnityEngine;
 public class ChangeDirection : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
-    private Vector3 newScale;
     
 
     void Start()
@@ -28,7 +27,6 @@ public class ChangeDirection : MonoBehaviour
             //newScale = new Vector3(transform.localScale.x, -transform.localScale.y, transform.localScale.z);
         }
 
-        //transform.localScale = newScale;
 
     }
 }

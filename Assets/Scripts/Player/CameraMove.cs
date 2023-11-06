@@ -6,7 +6,6 @@ public class CameraMove : MonoBehaviour
 {
     private Transform _player1;
     private float smoothSpeed = 0.125f;
-    private Vector3 _positionPlayer;
     private Vector3 offset = new Vector3(0,0,0);
 
     public void Init(Transform transformPlayer)
