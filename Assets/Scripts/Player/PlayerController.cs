@@ -69,7 +69,7 @@ namespace Player
             {
                 SetGround(ground);
             }
-            Debug.Log("Ground"+Ground);
+            //Debug.Log("Ground"+Ground);
         }
 
         public void SetGround(bool ground)

@@ -26,4 +26,9 @@ public class StructureLoadLevel : ScriptableObject
     {
         return _levelSettings[level - 1];
     }
+    
+    public int GetQuantityLevel()
+    {
+        return _levelSettings.Count;
+    }
 }

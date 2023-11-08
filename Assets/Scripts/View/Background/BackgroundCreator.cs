@@ -18,6 +18,7 @@ public class BackgroundCreator : MonoBehaviour
 
     private void Start()
     {
+        if (Camera.main is not null) _topRightCorner = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         CreateLayersBackground(_scene);
     }
 
@@ -33,8 +34,6 @@ public class BackgroundCreator : MonoBehaviour
 
     private void CreateLayersBackground(EScene eScene)
     {
-        if (Camera.main is not null) _topRightCorner = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
-
         var BackgroundLayer = _structureBg.GetBackgroundLayer(eScene);
         for (int i = 0; i < BackgroundLayer.Length; i++)
         {

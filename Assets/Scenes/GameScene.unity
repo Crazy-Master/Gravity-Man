@@ -349,7 +349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 709f10dca6325f047a813b700e7bdc26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _firstWindow: 3
+  _firstWindow: 0
   _bootstrap: {fileID: 2057997005}
 --- !u!1 &519420028
 GameObject:
@@ -987,7 +987,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabPlayer: {fileID: 7712165590062043582, guid: b940570de2a5d6e4ba9c9f99fa3e42db, type: 3}
   _camera: {fileID: 519420031}
-  _backgroundParallax: {fileID: 372896249}
   _backgroundCreator: {fileID: 372896251}
 --- !u!4 &2057997006
 Transform:

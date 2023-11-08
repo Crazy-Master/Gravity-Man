@@ -1,4 +1,3 @@
-using System;
 using Player;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -11,10 +10,10 @@ public class Bootstrap : MonoBehaviour
     private StructureLoadLevel _structureLL;
     [SerializeField] private GameObject _prefabPlayer;
     [SerializeField] private Camera _camera;
-    [SerializeField] private GameObject _backgroundParallax;
+    [SerializeField] private BackgroundCreator _backgroundCreator;
     private WorldController _worldController = new WorldController();
     private SettingLevel _settingLevel;
-    [SerializeField] private BackgroundCreator _backgroundCreator;
+    
     
     private GameObject _structureLevel;
     private GameObject _player;
@@ -27,7 +26,9 @@ public class Bootstrap : MonoBehaviour
 
     private void Start()
     {
-        StartLevel(1);
+        StartMainMenu();
+        _worldController.OnLoadGame += StartLevel;
+        _worldController.OnLoadMainMenu += StartMainMenu;
     }
 
     public void StartMainMenu()
@@ -36,7 +37,7 @@ public class Bootstrap : MonoBehaviour
         _backgroundCreator.Restart(EScene.MenuScene);
     }
 
-    public void StartLevel(int level)
+    public void StartLevel(int level, int numberPlayer)
     {
         _settingLevel = _structureLL.GetLevel(level);
         _backgroundCreator.Restart(_settingLevel.BackgroundScene);
@@ -46,8 +47,8 @@ public class Bootstrap : MonoBehaviour
     private void GenerationLevel()
     {
         _structureLevel = new GameObject("StructureLevel");
-        _structureLevel.transform.SetParent(Instantiate(_settingLevel.grid).transform);
-        _structureLevel.transform.SetParent(Instantiate(_settingLevel.decor).transform);
+        Instantiate(_settingLevel.grid).transform.SetParent(_structureLevel.transform);
+        Instantiate(_settingLevel.decor).transform.SetParent(_structureLevel.transform);
     }
 
     private void GenerationPlayer(Vector3 startPos, float gravity, float speed)
@@ -55,7 +56,7 @@ public class Bootstrap : MonoBehaviour
         _player = Instantiate(_prefabPlayer,startPos, Quaternion.identity);
         var playerController = _player.GetComponent<PlayerController>();
         playerController.Init(_worldController, gravity);
-        _player.GetComponent<PlayerMove>().Init(speed, 1, playerController);
+        _player.GetComponent<PlayerMove>().Init(speed, 1, playerController, _worldController);
         _camera.AddComponent<CameraMove>().Init(_player.transform);
         _worldController.Init(_player);
     }
@@ -70,5 +71,11 @@ public class Bootstrap : MonoBehaviour
     public WorldController GetWorldController()
     {
         return _worldController;
+    }
+
+    private void OnDestroy()
+    {
+        _worldController.OnLoadGame -= StartLevel;
+        _worldController.OnLoadMainMenu -= StartMainMenu;
     }
 }

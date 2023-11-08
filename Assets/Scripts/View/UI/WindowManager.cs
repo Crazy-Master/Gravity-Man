@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Core.Level;
 using UnityEngine;
 using Zenject;
 
@@ -12,9 +13,17 @@ namespace Core.WindowSystem
         [SerializeField] private EWindow _firstWindow;
         [SerializeField] private Bootstrap _bootstrap;
         private WorldController _worldController;
+        private int _levelActive;
+        private int _numberPlayer;
+        private bool _gameMode;
         
+        private StructureLoadLevel _structureLL;
+
         [Inject]
         private void Construct(StructureWindow structure) => _structureWindow = structure;
+        
+        [Inject]
+        private void Construct(StructureLoadLevel structure) => _structureLL = structure;
 
         private void Awake()
         {
@@ -31,10 +40,18 @@ namespace Core.WindowSystem
 
         public void OpenWindow(GetEWindow window)
         {
+            if (_gameMode)
+            {
+                Time.timeScale = 0;
+            }
             var obj = Instantiate(_structureWindow.GetWindow(window.eWindow), _canvas);
             obj.GetComponent<WindowController>().Init(this, _worldController);
             _stackWindows.Peek().SetActive(false);
             _stackWindows.Push(obj);
+            if (window.eWindow == EWindow.LevelsMenu)
+            {
+                obj.GetComponent<LevelManager>().Init(_structureLL.GetQuantityLevel());
+            }
         }
 
         public void CloseWindow()
@@ -42,8 +59,13 @@ namespace Core.WindowSystem
             if (_stackWindows.Count > 1)
             {
                 Destroy(_stackWindows.Pop());
-                _stackWindows.Peek().SetActive(true); 
+                _stackWindows.Peek().SetActive(true);
             }
+            if (_stackWindows.Count == 1)
+            {
+                Time.timeScale = 1;
+            }
+            
         }
 
         private void GameOver()
@@ -55,35 +77,48 @@ namespace Core.WindowSystem
         {
             OpenWindow(EWindow.LevelComplete);
         }
-
+        
         #endregion
 
         #region LoadingScene
 
-        public void LoadLevel(int level)
+        public void NextLevel()
         {
-            _bootstrap.StartLevel(level);
+            LoadLevel(_levelActive+1, _numberPlayer);
+        }
+        public void LoadLevel(int level, int numberPlayer)
+        {
+            _levelActive = level;
+            _numberPlayer = numberPlayer;
+            _worldController.LoadGame(level, numberPlayer);
+            DestroyWindow();
+            OpenWindow(EWindow.GameMenu);
+            _gameMode = true;
         }
         
         public void LoadMenu()
         {
-            _bootstrap.StartMainMenu();
-        }
-        public void LoadWindow(string scene)
-        {
-            
-            OpenWindow(EWindow.LoadingMenu).GetComponent<SceneLoader>().LoadSceneAsync(scene);
+            _worldController.LoadMainMenu();
+            DestroyWindow();
+            OpenWindow(EWindow.MineMenu);
+            _gameMode = false;
         }
 
-        private GameObject OpenWindow(EWindow window)
+        private void OpenWindow(EWindow window)
         {
             var obj = Instantiate(_structureWindow.GetWindow(window), _canvas);
             if (window != EWindow.LoadingMenu) obj.GetComponent<WindowController>().Init(this, _worldController);
-            _stackWindows.Peek().SetActive(false);
+            if (_stackWindows.Count != 0) _stackWindows.Peek().SetActive(false);
             _stackWindows.Push(obj);
-            return obj;
         }
 
+        private void DestroyWindow()
+        {
+            for (int i = 0; i <= _stackWindows.Count; i++)
+            {
+                Destroy(_stackWindows.Pop());
+            }
+        }
         #endregion
 
         private void OnDestroy()

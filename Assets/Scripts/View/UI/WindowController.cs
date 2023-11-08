@@ -22,11 +22,24 @@ public class WindowController : MonoBehaviour
         _windowManager.CloseWindow();
     }
     
-    public void LoadScene(string scene)
+    public void NextLevel()
     {
-        //_windowManager.LoadScene(scene);
+        _windowManager.NextLevel();
     }
     
+    public void LoadSingleLevel(int level)
+    {
+        _windowManager.LoadLevel(level, 1);
+    }
+    public void LoadMultiplayerLevel()
+    {
+        _windowManager.LoadLevel(1, 2);
+    }
+    
+    public void LoadMainMenu()
+    {
+        _windowManager.LoadMenu();
+    }
     public void Restart()
     {
         _windowManager.CloseWindow();
@@ -36,5 +49,10 @@ public class WindowController : MonoBehaviour
     {
         _windowManager.CloseWindow();
         _worldController.Resurrect();
+    }
+
+    public void TapSwapGravity(int numberPlayer)
+    {
+        _worldController.SwapGravity(numberPlayer);
     }
 }

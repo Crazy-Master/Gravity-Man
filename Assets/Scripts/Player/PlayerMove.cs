@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace Player
@@ -11,6 +10,7 @@ namespace Player
         private float _speedMove = 3;
         private int _numderPlayer;
         private PlayerController _playerController;
+        private WorldController _worldController;
 
 
 
@@ -20,41 +20,69 @@ namespace Player
             anim = GetComponent<Animator>();
         }
 
-        public void Init(float speed, int numderPlayer, PlayerController playerController)
+        public void Init(float speed, int numderPlayer, PlayerController playerController, WorldController worldController)
         {
             _speedMove = speed;
             _numderPlayer = numderPlayer;
             _playerController = playerController;
+            _worldController = worldController;
             _playerController.OnChangeGravity += SetAnimationGravity;
             _playerController.OnChangeGround += SetAnimationGround;
+            _worldController.OnSwapGravity += TapSwapGravity;
             SetAnimationGravity(_playerController.Gravity);
             SetAnimationGround(_playerController.Ground);
         }
 
-        void Update()
+        private void Update()
         {
             Run();
-            switch (_numderPlayer)
+#if true
+            
+           switch (_numderPlayer)
+                       {
+                           case 1:
+                               if (Input.GetKeyDown(KeyCode.A) && _playerController.Ground)
+                               {
+                                   SwapGravity();
+                               }
+           
+                               break;
+                           case 2:
+                               if (Input.GetKeyDown(KeyCode.S) && _playerController.Ground)
+                               {
+                                   SwapGravity();
+                               }
+           
+                               break;
+                           case 3:
+                               if (Input.GetKeyDown(KeyCode.D) && _playerController.Ground)
+                               {
+                                   SwapGravity();
+                               }
+           
+                               break;
+                           default:
+                               if (Input.GetKeyDown(KeyCode.F) && _playerController.Ground)
+                               {
+                                   SwapGravity();
+                               }
+                               break;
+                       } 
+           
+#endif
+            
+        }
+
+        private void TapSwapGravity(int numderPlayer)
+        {
+            if (numderPlayer == _numderPlayer && _playerController.Ground)
             {
-                case 1:
-                    if (Input.GetMouseButtonDown(0) && _playerController.Ground)
-                    {
-                        SwapGravity();
-                    }
-
-                    break;
-                default:
-                    if (Input.GetKeyDown(KeyCode.Space) && _playerController.Ground)
-                    {
-                        SwapGravity();
-                    }
-
-                    break;
+                SwapGravity();
             }
         }
 
 
-        void Run()
+        private void Run()
         {
             transform.Translate(Vector3.right * _speedMove * Time.deltaTime, Space.World);
         }
@@ -98,6 +126,7 @@ namespace Player
         {
             _playerController.OnChangeGravity -= SetAnimationGravity;
             _playerController.OnChangeGround -= SetAnimationGround;
+            _worldController.OnSwapGravity -= TapSwapGravity;
         }
     }
 

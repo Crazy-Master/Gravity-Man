@@ -25,7 +25,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 684959028981653645}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -452,6 +452,7 @@ GameObject:
   - component: {fileID: 7066063704996894873}
   - component: {fileID: 435883909386117049}
   - component: {fileID: 3293604228065781366}
+  - component: {fileID: 4493608283846506613}
   m_Layer: 5
   m_Name: LevelButton
   m_TagString: Untagged
@@ -527,7 +528,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5846661105412375959}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -539,11 +540,11 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.9811321, g: 0.95381796, b: 0.8191527, a: 1}
+    m_PressedColor: {r: 0.9811321, g: 0.9069937, b: 0.54147387, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -563,19 +564,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7066063704996894873}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: WindowController, Assembly-CSharp
-        m_MethodName: OpenWindow
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 3293604228065781366}
-          m_ObjectArgumentAssemblyTypeName: GetEWindow, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &3293604228065781366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -589,6 +578,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eWindow: 1
+--- !u!114 &4493608283846506613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5846661105412375959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 476af22f69a488546ad72edd139526e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _locked: {fileID: 5045131322189709388}
+  _unlock: {fileID: 928986679822329747}
+  _button: {fileID: 435883909386117049}
+  _starSprite:
+  - {fileID: 8274161224943541256}
+  - {fileID: 771456754645443546}
+  - {fileID: 1633794505686782965}
+  _starLite: {fileID: 21300000, guid: 367a72a13d31fe84da189e271721e409, type: 3}
 --- !u!1 &8194646514535883437
 GameObject:
   m_ObjectHideFlags: 0
