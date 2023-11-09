@@ -19,7 +19,7 @@ public class Test: MonoBehaviour
     private void Start()
     {
         playerController.Init(_worldController, Gravity);
-        playerMove.Init(Speed, NumberPlayer, playerController);
+        playerMove.Init(Speed, NumberPlayer, playerController, _worldController);
         _worldController.Init(playerController.gameObject);
     }
 
