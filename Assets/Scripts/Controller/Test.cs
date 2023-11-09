@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using Player;
 
@@ -17,7 +19,7 @@ public class Test: MonoBehaviour
     private void Start()
     {
         playerController.Init(_worldController, Gravity);
-        playerMove.Init(Speed, NumberPlayer, playerController, _worldController);
+        playerMove.Init(Speed, NumberPlayer, playerController);
         _worldController.Init(playerController.gameObject);
     }
 

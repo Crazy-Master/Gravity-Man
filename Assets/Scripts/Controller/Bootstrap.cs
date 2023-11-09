@@ -19,6 +19,7 @@ public class Bootstrap : MonoBehaviour
     private GameObject _structureLevel;
     private GameObject _player;
     private GameObject _playerTwo;
+    private GameObject _enemy;
     
     private int level = 1; //загрузка из яндекса
 
@@ -65,7 +66,9 @@ public class Bootstrap : MonoBehaviour
         _worldController.Init(_player);
     }
 
-    private void DestroyLevel()
+   
+
+        private void DestroyLevel()
     {
         if (_structureLevel != null) Destroy(_structureLevel);
         if (_player != null) Destroy(_player);
