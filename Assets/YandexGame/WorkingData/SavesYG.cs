@@ -1,4 +1,6 @@
-﻿
+﻿using System.Collections.Generic;
+using Core.Level;
+
 namespace YG
 {
     [System.Serializable]
@@ -18,7 +20,7 @@ namespace YG
 
         // Ваши сохранения
 
-        // ...
+        public List<LevelData> LevelDatas;
 
         // Поля (сохранения) можно удалять и создавать новые. При обновлении игры сохранения ломаться не должны
 

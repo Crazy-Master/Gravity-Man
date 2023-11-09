@@ -698,6 +698,7 @@ GameObject:
   - component: {fileID: 4557516715204601587}
   - component: {fileID: 6891922385711034131}
   - component: {fileID: 4041670764994754445}
+  - component: {fileID: 4355285455611881436}
   m_Layer: 5
   m_Name: LevelComplete
   m_TagString: Untagged
@@ -780,6 +781,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be0c954b243ece24db505e3a95bac491, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4355285455611881436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5118806260266904623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0516fde0db7d5245a6ebd464e1e377b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _stars:
+  - {fileID: 7344873681000912821}
+  - {fileID: 2339717684571076406}
+  - {fileID: 2611540634588675783}
+  _starLite: {fileID: 21300000, guid: 79f528a77c09c8340b727a2aa6ba6603, type: 3}
+  _windowController: {fileID: 4041670764994754445}
 --- !u!1 &6288005810220161256
 GameObject:
   m_ObjectHideFlags: 0

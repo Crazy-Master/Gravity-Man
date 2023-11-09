@@ -48,10 +48,6 @@ namespace Core.WindowSystem
             obj.GetComponent<WindowController>().Init(this, _worldController);
             _stackWindows.Peek().SetActive(false);
             _stackWindows.Push(obj);
-            if (window.eWindow == EWindow.LevelsMenu)
-            {
-                obj.GetComponent<LevelManager>().Init(_structureLL.GetQuantityLevel());
-            }
         }
 
         public void CloseWindow()
@@ -73,9 +69,10 @@ namespace Core.WindowSystem
             OpenWindow(EWindow.GameOver);
         }
         
-        private void LevelComplete()
+        private void LevelComplete(int star)
         {
             OpenWindow(EWindow.LevelComplete);
+            
         }
         
         #endregion

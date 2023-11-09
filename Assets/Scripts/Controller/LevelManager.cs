@@ -1,31 +1,35 @@
-using System;
+using System.Collections.Generic;
+using Core.Level;
 using UnityEngine;
+using YG;
 
-namespace Core.Level
+public class LevelManager
 {
-    [Serializable]
-    public struct LevelData
-   {
-      public int level;
-      public bool locked;
-      public int star;
-   }
-   public class LevelManager : MonoBehaviour
-   {
-       [SerializeField] private Transform _transformParent;
-       [SerializeField] private GameObject _prefab;
-       [SerializeField] private WindowController _windowController;
+    private WorldController _worldController;
 
-       [SerializeField] private LevelData[] _levelDatas;
-       public void Init(int QuantityLevel)
-       {
-           for (int i = 0; i < QuantityLevel; i++)
-           {
-               var level = Instantiate(_prefab, _transformParent);
-               level.GetComponent<LevelUI>().Init(_levelDatas[i], _windowController);
-           }
-           
-       }
-   } 
+    public LevelManager(WorldController worldController)
+    {
+        _worldController = worldController;
+        _worldController.OnLevelComplete += LevelComplete;
+    }
+
+    public void InitLevels()
+    {
+        if (YandexGame.savesData.LevelDatas == null)
+        {
+            var levelDatas = new List<LevelData>();
+            levelDatas.Add(new LevelData(1, false, 0));
+            YandexGame.savesData.LevelDatas = levelDatas;
+        }
+    }
+    
+    private void LevelComplete(int star)
+    {
+        var level = _worldController.ActiveLevel;
+        var levelDatas = YandexGame.savesData.LevelDatas[level - 1];
+        if (star > levelDatas.stars)
+        {
+            YandexGame.savesData.LevelDatas[level-1] = new LevelData(level, true, star);
+        }
+    }
 }
-

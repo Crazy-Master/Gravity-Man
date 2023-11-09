@@ -11,6 +11,7 @@ public class Bootstrap : MonoBehaviour
     [SerializeField] private GameObject _prefabPlayer;
     [SerializeField] private Camera _camera;
     [SerializeField] private BackgroundCreator _backgroundCreator;
+    private LevelManager _levelManager;
     private WorldController _worldController = new WorldController();
     private SettingLevel _settingLevel;
     
@@ -26,6 +27,9 @@ public class Bootstrap : MonoBehaviour
 
     private void Start()
     {
+        _levelManager = new LevelManager(_worldController);
+        _levelManager.InitLevels();
+        
         StartMainMenu();
         _worldController.OnLoadGame += StartLevel;
         _worldController.OnLoadMainMenu += StartMainMenu;
@@ -39,6 +43,7 @@ public class Bootstrap : MonoBehaviour
 
     public void StartLevel(int level, int numberPlayer)
     {
+        DestroyLevel();
         _settingLevel = _structureLL.GetLevel(level);
         _backgroundCreator.Restart(_settingLevel.BackgroundScene);
         GenerationLevel();
@@ -63,8 +68,8 @@ public class Bootstrap : MonoBehaviour
 
     private void DestroyLevel()
     {
-        Destroy(_structureLevel);
-        Destroy(_player);
+        if (_structureLevel != null) Destroy(_structureLevel);
+        if (_player != null) Destroy(_player);
         if (_playerTwo != null) Destroy(_player);
     }
 

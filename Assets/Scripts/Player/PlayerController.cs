@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Player
@@ -42,10 +43,12 @@ namespace Player
             _worldController.OnRestartGame += Restart;
             _worldController.OnResurrectGame += Resurrect;
             _restartSave.SetData(transform.position, gravity);
+            _resurrectSave = _restartSave;
         }
 
         public void OnTriggerEnter2D(Collider2D other)
         {
+            Debug.Log(other);
             switch (other.gameObject.tag)
             {
                case "Dead":
@@ -57,6 +60,9 @@ namespace Player
                    break;
                case "LevelComplete":
                    _worldController.LevelComplete();
+                   break;
+               case "Star":
+                   other.GetComponent<StarController>().Destroy(_worldController);
                    break;
             }
         }

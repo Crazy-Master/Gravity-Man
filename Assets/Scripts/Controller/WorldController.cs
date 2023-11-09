@@ -6,9 +6,10 @@ public class WorldController
     private GameObject _player;
     
     public int ActiveLevel;
+    public int Stars { get; private set; }
     public event Action OnRestartGame;
     public event Action OnResurrectGame;
-    public event Action OnLevelComplete;
+    public event Action<int> OnLevelComplete;
     public event Action OnGameOver;
     
     public event Action<int, int> OnLoadGame;
@@ -17,6 +18,11 @@ public class WorldController
     
     public event Action<int> OnSwapGravity;
 
+    public void SetStars()
+    {
+        Debug.Log("star");
+        if (Stars != 3) Stars++;
+    }
     public void Init(GameObject player)
     {
         _player = player;
@@ -40,12 +46,14 @@ public class WorldController
     }
     public void LevelComplete()
     {
-        OnLevelComplete?.Invoke();
+        OnLevelComplete?.Invoke(Stars);
     }
 
     public void LoadGame(int level, int numberPlayer)
     {
+        ActiveLevel = level;
         OnLoadGame?.Invoke(level, numberPlayer);
+        Stars = 0;
     }
     
     public void LoadMainMenu()

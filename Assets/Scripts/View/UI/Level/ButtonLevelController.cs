@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace Core.Level
 {
-    public class LevelUI : MonoBehaviour
+    public class ButtonLevelController : MonoBehaviour
     {
         [SerializeField] private GameObject _locked;
         [SerializeField] private GameObject _unlock;
@@ -23,7 +23,7 @@ namespace Core.Level
                 _unlock.SetActive(true);
                 _unlock.GetComponent<TextMeshProUGUI>().text = levelData.level.ToString();
                 _button.enabled = true;
-                for (int i = 0; i < levelData.star; i++)
+                for (int i = 0; i < levelData.stars; i++)
                 {
                     _starSprite[i].sprite = _starLite;
                 }

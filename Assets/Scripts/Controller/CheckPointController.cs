@@ -24,7 +24,7 @@ public class CheckPointController : MonoBehaviour
             _position = point.transform.position - new Vector3(0,0.1f,0);
             _gravity = -1;
         }
-            UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(gameObject.scene);
+        UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(gameObject.scene);
         #endif
     }
 

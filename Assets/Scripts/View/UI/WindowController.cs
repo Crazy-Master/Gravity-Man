@@ -4,12 +4,12 @@ using UnityEngine;
 public class WindowController : MonoBehaviour
 {
     private WindowManager _windowManager;
-    private WorldController _worldController;
+    public WorldController worldController { get; private set; }
 
     public void Init(WindowManager windowManager, WorldController worldController)
     {
         _windowManager = windowManager;
-        _worldController = worldController;
+        this.worldController = worldController;
     }
 
     public void OpenWindow(GetEWindow eWindow)
@@ -43,16 +43,16 @@ public class WindowController : MonoBehaviour
     public void Restart()
     {
         _windowManager.CloseWindow();
-        _worldController.Restart();
+        worldController.Restart();
     }
     public void Resurrect()
     {
         _windowManager.CloseWindow();
-        _worldController.Resurrect();
+        worldController.Resurrect();
     }
 
     public void TapSwapGravity(int numberPlayer)
     {
-        _worldController.SwapGravity(numberPlayer);
+        worldController.SwapGravity(numberPlayer);
     }
 }
