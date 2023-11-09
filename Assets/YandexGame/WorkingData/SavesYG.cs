@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Core.Level;
+﻿using Core.Level;
 
 namespace YG
 {
@@ -20,7 +19,8 @@ namespace YG
 
         // Ваши сохранения
 
-        public List<LevelData> LevelDatas;
+        
+        public LevelData[] LevelDatas = new LevelData[3];
 
         // Поля (сохранения) можно удалять и создавать новые. При обновлении игры сохранения ломаться не должны
 
@@ -31,6 +31,12 @@ namespace YG
             // Допустим, задать значения по умолчанию для отдельных элементов массива
 
             openLevels[1] = true;
+            LevelDatas[0] = new LevelData(true, 0);
+        }
+
+        public void SetQuantityLevel(int quantityLevels)
+        {
+            LevelDatas = new LevelData[quantityLevels];
         }
     }
 }

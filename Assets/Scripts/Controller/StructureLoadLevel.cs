@@ -24,7 +24,7 @@ public class StructureLoadLevel : ScriptableObject
      
     public SettingLevel GetLevel(int level)
     {
-        return _levelSettings[level - 1];
+        return _levelSettings[level];
     }
     
     public int GetQuantityLevel()

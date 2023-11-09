@@ -7,14 +7,12 @@ namespace Core.Level
     [Serializable]
     public struct LevelData
    {
-      public int level;
-      public bool locked;
+      public bool openLevel;
       public int stars;
 
-      public LevelData(int lvl, bool loc, int star)
+      public LevelData(bool open, int star)
       {
-          level = lvl;
-          locked = loc;
+          openLevel = open;
           stars = star;
       }
    }
@@ -26,16 +24,14 @@ namespace Core.Level
        [SerializeField] private ButtonLevelController[] Level;
        
        [SerializeField] private StructureLoadLevel _structureLoadLevel;
-       
-       [SerializeField] private LevelData[] _levelDatas; //заменить на SavesYG
-       
+
        private void Start()
        {
            var levelDatas = YandexGame.savesData.LevelDatas;
            if (levelDatas == null) return;
-           for (int i = 0; i < _levelDatas.Length; i++)
+           for (int i = 0; i < levelDatas.Length; i++)
            {
-               Level[i].Init(levelDatas[i],_windowController);
+               Level[i].Init(i, levelDatas[i],_windowController);
            }
        }
 
@@ -43,7 +39,7 @@ namespace Core.Level
 
        public void SetSaveLevel()
        {
-           #if UNITY_EDITOR
+#if UNITY_EDITOR
            if (Level != null)
                for (int i = 0; i < Level.Length; i++)
                {
@@ -55,9 +51,10 @@ namespace Core.Level
            {
                Level[i] = Instantiate(_prefab, _transformParent).GetComponent<ButtonLevelController>();
            }
+           YandexGame.savesData.SetQuantityLevel(_structureLoadLevel.GetQuantityLevel());
            UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(gameObject.scene);
            
-           #endif
+#endif
        }
    } 
 }

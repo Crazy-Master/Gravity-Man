@@ -91,6 +91,7 @@ namespace Core.WindowSystem
             DestroyWindow();
             OpenWindow(EWindow.GameMenu);
             _gameMode = true;
+            Time.timeScale = 1;
         }
         
         public void LoadMenu()
@@ -103,6 +104,10 @@ namespace Core.WindowSystem
 
         private void OpenWindow(EWindow window)
         {
+            if (_gameMode)
+            {
+                Time.timeScale = 0;
+            }
             var obj = Instantiate(_structureWindow.GetWindow(window), _canvas);
             if (window != EWindow.LoadingMenu) obj.GetComponent<WindowController>().Init(this, _worldController);
             if (_stackWindows.Count != 0) _stackWindows.Peek().SetActive(false);

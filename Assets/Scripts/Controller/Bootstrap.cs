@@ -28,8 +28,7 @@ public class Bootstrap : MonoBehaviour
     private void Start()
     {
         _levelManager = new LevelManager(_worldController);
-        _levelManager.InitLevels();
-        
+
         StartMainMenu();
         _worldController.OnLoadGame += StartLevel;
         _worldController.OnLoadMainMenu += StartMainMenu;

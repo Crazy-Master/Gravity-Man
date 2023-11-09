@@ -13,23 +13,15 @@ public class LevelManager
         _worldController.OnLevelComplete += LevelComplete;
     }
 
-    public void InitLevels()
-    {
-        if (YandexGame.savesData.LevelDatas == null)
-        {
-            var levelDatas = new List<LevelData>();
-            levelDatas.Add(new LevelData(1, false, 0));
-            YandexGame.savesData.LevelDatas = levelDatas;
-        }
-    }
-    
     private void LevelComplete(int star)
     {
         var level = _worldController.ActiveLevel;
-        var levelDatas = YandexGame.savesData.LevelDatas[level - 1];
+        var levelDatas = YandexGame.savesData.LevelDatas[level];
         if (star > levelDatas.stars)
         {
-            YandexGame.savesData.LevelDatas[level-1] = new LevelData(level, true, star);
+            YandexGame.savesData.LevelDatas[level] = new LevelData(true, star);
         }
+
+        YandexGame.savesData.LevelDatas[level+1].openLevel = true;
     }
 }

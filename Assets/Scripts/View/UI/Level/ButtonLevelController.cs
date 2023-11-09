@@ -14,14 +14,14 @@ namespace Core.Level
         [SerializeField] private Sprite _starLite;
         private int _star;
 
-        public void Init(LevelData levelData, WindowController windowController)
+        public void Init(int level, LevelData levelData, WindowController windowController)
         {
-            if (levelData.locked == false)
+            if (levelData.openLevel == true)
             {
-                _button.onClick.AddListener(()=>windowController.LoadSingleLevel(levelData.level));
+                _button.onClick.AddListener(()=>windowController.LoadSingleLevel(level));
                 _locked.SetActive(false);
                 _unlock.SetActive(true);
-                _unlock.GetComponent<TextMeshProUGUI>().text = levelData.level.ToString();
+                _unlock.GetComponent<TextMeshProUGUI>().text = level.ToString();
                 _button.enabled = true;
                 for (int i = 0; i < levelData.stars; i++)
                 {
