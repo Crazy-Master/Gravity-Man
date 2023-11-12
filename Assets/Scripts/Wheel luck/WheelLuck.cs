@@ -5,7 +5,7 @@ public class WheelLuck : MonoBehaviour
 {
     public PickRandomBoost _pickRanomBoost;
 
-    public Transform wheelTransform;
+    public RectTransform wheelTransform;
     public int numberOfSegments;
     public int spinCount;
     public int stopSegmentIndex;

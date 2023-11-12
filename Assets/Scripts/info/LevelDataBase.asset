@@ -31,3 +31,9 @@ MonoBehaviour:
     gravity: 1.5
     posPlayer: {x: -3, y: -3, z: 0}
     speed: 3
+  - BackgroundScene: 1
+    grid: {fileID: 3124641439088321386, guid: 9ff8376092906b5468ceb7e8acd16eb1, type: 3}
+    decor: {fileID: 2095461608177293295, guid: 112afede59493d44f90f3ddb7e253444, type: 3}
+    gravity: 1.5
+    posPlayer: {x: -3, y: -3, z: 0}
+    speed: 3

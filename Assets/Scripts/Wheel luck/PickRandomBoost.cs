@@ -8,6 +8,7 @@ public class Item
     public string name;
     public int number;
     public float dropChance;
+    public Sprite sprite;
 }
 
 public class PickRandomBoost : MonoBehaviour
