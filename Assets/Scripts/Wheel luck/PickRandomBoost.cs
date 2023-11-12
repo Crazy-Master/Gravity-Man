@@ -13,16 +13,7 @@ public class Item
 public class PickRandomBoost : MonoBehaviour
 {
     public List<Item> items = new List<Item>();
-
-    public void AddItem(string name, int number, float dropChance)
-    {
-        Item newItem = new Item();
-        newItem.name = name;
-        newItem.number = number;
-        newItem.dropChance = dropChance;
-        items.Add(newItem);
-    }
-
+    
     public int GetRandomItemNumber()
     {
         float totalChance = 0f;
