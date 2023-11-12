@@ -21,7 +21,7 @@ namespace Core.Level
                 _button.onClick.AddListener(()=>windowController.LoadSingleLevel(level));
                 _locked.SetActive(false);
                 _unlock.SetActive(true);
-                _unlock.GetComponent<TextMeshProUGUI>().text = level.ToString();
+                _unlock.GetComponent<TextMeshProUGUI>().text = (level+1).ToString();
                 _button.enabled = true;
                 for (int i = 0; i < levelData.stars; i++)
                 {

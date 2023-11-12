@@ -102,7 +102,7 @@ namespace Player
         void Run()
         {
 
-            rb.AddForce(movement * 1000 * Time.deltaTime);
+            rb.AddForce(movement * 3000 * Time.deltaTime);
             
         }
 

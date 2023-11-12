@@ -1,0 +1,27 @@
+{
+    "idSave": 6,
+    "isFirstSession": false,
+    "language": "ru",
+    "promptDone": false,
+    "money": 2,
+    "newPlayerName": "Lolio",
+    "openLevels": [
+        false,
+        true,
+        false
+    ],
+    "LevelDatas": [
+        {
+            "openLevel": true,
+            "stars": 3
+        },
+        {
+            "openLevel": true,
+            "stars": 0
+        },
+        {
+            "openLevel": false,
+            "stars": 0
+        }
+    ]
+}

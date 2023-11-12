@@ -16,12 +16,12 @@ public class LevelManager
     private void LevelComplete(int star)
     {
         var level = _worldController.ActiveLevel;
-        var levelDatas = YandexGame.savesData.LevelDatas[level];
-        if (star > levelDatas.stars)
+        if (star > YandexGame.savesData.LevelDatas[level].stars)
         {
             YandexGame.savesData.LevelDatas[level] = new LevelData(true, star);
         }
 
         YandexGame.savesData.LevelDatas[level+1].openLevel = true;
+        YandexGame.SaveProgress();
     }
 }
