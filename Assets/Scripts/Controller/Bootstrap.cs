@@ -1,3 +1,4 @@
+using Core.AudioSystem;
 using Player;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -39,6 +40,7 @@ public class Bootstrap : MonoBehaviour
     {
         DestroyLevel();
         _backgroundCreator.Restart(EScene.MenuScene);
+        BgMusic.Instance.SetMusic(EMusic.MainMenu);
     }
 
     public void StartLevel(int level, int numberPlayer)
@@ -48,6 +50,7 @@ public class Bootstrap : MonoBehaviour
         _backgroundCreator.Restart(_settingLevel.BackgroundScene);
         GenerationLevel();
         GenerationPlayer(_settingLevel.posPlayer, _settingLevel.gravity, _settingLevel.speed);
+        BgMusic.Instance.SetMusic(EMusic.Game);
     }
     private void GenerationLevel()
     {

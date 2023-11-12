@@ -14,7 +14,7 @@ public class WindowController : MonoBehaviour
 
     public void OpenWindow(GetEWindow eWindow)
     {
-        _windowManager.OpenWindow(eWindow);
+        _windowManager.OpenWindow(eWindow.eWindow);
     }
 
     public void CloseWindow()
@@ -38,7 +38,7 @@ public class WindowController : MonoBehaviour
     
     public void LoadMainMenu()
     {
-        _windowManager.LoadMenu();
+        _windowManager.LoadMainMenu();
     }
     public void Restart()
     {

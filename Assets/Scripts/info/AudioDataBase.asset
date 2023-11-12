@@ -13,4 +13,8 @@ MonoBehaviour:
   m_Name: AudioDataBase
   m_EditorClassIdentifier: 
   sound: []
-  music: []
+  music:
+  - eMusic: 0
+    musicClip: {fileID: 8300000, guid: 87890a66193394e3cb7d6284cc6b4344, type: 3}
+  - eMusic: 1
+    musicClip: {fileID: 8300000, guid: 956ad2f73332544fd87365087825cc4f, type: 3}

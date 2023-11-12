@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Core.AudioSystem;
 using UnityEngine;
 using View.Background;
 
@@ -11,6 +12,7 @@ using View.Background;
         public GameObject grid;
         public GameObject decor;
         public float gravity;
+        public EMusic eMusic;
         [Space] [Header("Player")] 
         public Vector3 posPlayer;
         public float speed;

@@ -38,15 +38,15 @@ namespace Core.WindowSystem
 
         #region OpenWindows
 
-        public void OpenWindow(GetEWindow window)
+        public void OpenWindow(EWindow window)
         {
             if (_gameMode)
             {
                 Time.timeScale = 0;
             }
-            var obj = Instantiate(_structureWindow.GetWindow(window.eWindow), _canvas);
-            obj.GetComponent<WindowController>().Init(this, _worldController);
-            _stackWindows.Peek().SetActive(false);
+            var obj = Instantiate(_structureWindow.GetWindow(window), _canvas);
+            if (window != EWindow.LoadingMenu) obj.GetComponent<WindowController>().Init(this, _worldController);
+            if (_stackWindows.Count != 0) _stackWindows.Peek().SetActive(false);
             _stackWindows.Push(obj);
         }
 
@@ -87,32 +87,22 @@ namespace Core.WindowSystem
         {
             _levelActive = level;
             _numberPlayer = numberPlayer;
-            _worldController.LoadGame(level, numberPlayer);
             DestroyWindow();
             OpenWindow(EWindow.GameMenu);
             _gameMode = true;
             Time.timeScale = 1;
+            _worldController.LoadGame(level, numberPlayer);
         }
         
-        public void LoadMenu()
+        public void LoadMainMenu()
         {
-            _worldController.LoadMainMenu();
             DestroyWindow();
             OpenWindow(EWindow.MineMenu);
             _gameMode = false;
+            _worldController.LoadMainMenu();
         }
 
-        private void OpenWindow(EWindow window)
-        {
-            if (_gameMode)
-            {
-                Time.timeScale = 0;
-            }
-            var obj = Instantiate(_structureWindow.GetWindow(window), _canvas);
-            if (window != EWindow.LoadingMenu) obj.GetComponent<WindowController>().Init(this, _worldController);
-            if (_stackWindows.Count != 0) _stackWindows.Peek().SetActive(false);
-            _stackWindows.Push(obj);
-        }
+        
 
         private void DestroyWindow()
         {
