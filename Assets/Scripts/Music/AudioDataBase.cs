@@ -6,7 +6,11 @@ namespace Core.AudioSystem
 {    
     public enum ESound
     { 
-        Tap
+        TapButton,
+        JumpPlayer,
+        DeadPlayer,
+        WheelFortune,
+        AbilityActivation
     }
 
     public enum EMusic

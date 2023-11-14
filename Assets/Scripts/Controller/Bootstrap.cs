@@ -15,8 +15,8 @@ public class Bootstrap : MonoBehaviour
     private LevelManager _levelManager;
     private WorldController _worldController = new WorldController();
     private SettingLevel _settingLevel;
-    
-    
+
+    private int _numberPlayer = 1;
     private GameObject _structureLevel;
     private GameObject _player;
     private GameObject _playerTwo;
@@ -61,12 +61,18 @@ public class Bootstrap : MonoBehaviour
 
     private void GenerationPlayer(Vector3 startPos, float gravity, float speed)
     {
-        _player = Instantiate(_prefabPlayer,startPos, Quaternion.identity);
-        var playerController = _player.GetComponent<PlayerController>();
-        playerController.Init(_worldController, gravity);
-        _player.GetComponent<PlayerMove>().Init(speed, 1, playerController, _worldController);
-        _camera.AddComponent<CameraMove>().Init(_player.transform);
-        _worldController.Init(_player);
+        GameObject[] players = new GameObject[_numberPlayer];
+        for (int i = 0; i < _numberPlayer; i++)
+        {
+            _player = Instantiate(_prefabPlayer,startPos, Quaternion.identity);
+            var playerController = _player.GetComponent<PlayerController>();
+            playerController.Init(_worldController, gravity);
+            _player.GetComponent<PlayerMove>().Init(speed, i, playerController, _worldController);
+            _camera.AddComponent<CameraMove>().Init(_player.transform);
+
+            players[i] = _player;
+        }
+        _worldController.SetPlayers(players);
     }
 
    

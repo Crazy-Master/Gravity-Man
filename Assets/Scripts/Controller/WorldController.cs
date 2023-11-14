@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class WorldController
 {
-    private GameObject _player;
+    private GameObject[] _players;
     
     public int ActiveLevel;
     public int Stars { get; private set; }
@@ -23,19 +23,25 @@ public class WorldController
         Debug.Log("star");
         if (Stars != 3) Stars++;
     }
-    public void Init(GameObject player)
+    public void SetPlayers(GameObject[] players)
     {
-        _player = player;
+        _players = players;
     }
     public void Restart()
     {
-        _player.SetActive(true);
+        foreach (var player in _players)
+        {
+            player.SetActive(true);
+        }
         OnRestartGame?.Invoke();
     }
     
     public void Resurrect()
     {
-        _player.SetActive(true);
+        foreach (var player in _players)
+        {
+            player.SetActive(true);
+        }
         OnResurrectGame?.Invoke();
         
     }

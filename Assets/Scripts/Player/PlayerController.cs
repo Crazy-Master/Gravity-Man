@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Player
@@ -19,6 +17,7 @@ namespace Player
     public class PlayerController : MonoBehaviour
     {
         [SerializeField] private Transform _groundCheck;
+        [SerializeField] private Transform _wallCheck;
         [SerializeField] private LayerMask _groundLayer;
         private SavePlayer _restartSave; //разобраться с гравитацией!!!
         private SavePlayer _resurrectSave;
@@ -26,20 +25,35 @@ namespace Player
         private Rigidbody2D _rigidbody2D;
         public event Action<float> OnChangeGravity;
         public event Action<bool> OnChangeGround;
+        public event Action<bool> OnChangeWall;
         public float Gravity {private set; get; }
         public bool Ground {private set; get; }
-        private bool PreviousGround;
+        
+        public bool Wall {private set; get; }
+        
+        private bool _previousGround;
+        private bool _previousWall;
 
         void Awake()
         {
             _rigidbody2D = GetComponent<Rigidbody2D>();
-            SetGround(true);
+        }
+
+        private void Rayc()
+        {
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, -transform.up, 1);
+            if (hit.collider != null)
+            {
+                Debug.Log(hit.collider.tag);
+            }
+            
         }
         
         public void Init(WorldController worldController, float gravity)
         {
             _worldController = worldController;
             SetGravity(gravity);
+            SetWall(false);
             _worldController.OnRestartGame += Restart;
             _worldController.OnResurrectGame += Resurrect;
             _restartSave.SetData(transform.position, gravity);
@@ -48,7 +62,6 @@ namespace Player
 
         public void OnTriggerEnter2D(Collider2D other)
         {
-            Debug.Log(other);
             switch (other.gameObject.tag)
             {
                case "Dead":
@@ -67,22 +80,27 @@ namespace Player
             }
         }
 
-        private void Update()
+        private void FixedUpdate()
         {
-            
+            bool wall =Physics2D.Raycast(_wallCheck.position, transform.right, 0.1f, _groundLayer);
             bool ground =Physics2D.OverlapCircle(_groundCheck.position, 0.1f, _groundLayer);
-            if (ground != PreviousGround)
-            {
-                SetGround(ground);
-            }
-            //Debug.Log("Ground"+Ground);
+            if (wall != _previousWall) SetWall(wall);
+            if (ground != _previousGround) SetGround(ground);
+            
         }
 
         public void SetGround(bool ground)
         {
-            PreviousGround = Ground;
+            _previousGround = Ground;
             Ground = ground;
             OnChangeGround?.Invoke(ground);
+        }
+        
+        public void SetWall(bool wall)
+        {
+            _previousWall = Wall;
+            Wall = wall;
+            OnChangeWall?.Invoke(wall);
         }
         /*public void OnCollisionEnter2D(Collision2D other)
         {
