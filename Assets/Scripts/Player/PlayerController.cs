@@ -38,19 +38,11 @@ namespace Player
         void Awake()
         {
             _rigidbody2D = GetComponent<Rigidbody2D>();
-            _sizeBox = new Vector2(gameObject.GetComponent<CapsuleCollider2D>().size.y * 0.9f, 0.1f);
+            var colliderSize = gameObject.GetComponent<CapsuleCollider2D>().size;
+            Debug.Log("colliderSize: "+colliderSize);
+            _sizeBox = new Vector2( colliderSize.x/2 + 0.05f,colliderSize.y/2 * 0.80f );
         }
 
-        private void Rayc()
-        {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, -transform.up, 1);
-            if (hit.collider != null)
-            {
-                Debug.Log(hit.collider.tag);
-            }
-            
-        }
-        
         public void Init(WorldController worldController, float gravity)
         {
             _worldController = worldController;
@@ -84,7 +76,7 @@ namespace Player
 
         private void FixedUpdate()
         {
-            bool wall =Physics2D.OverlapBox(_forwardCheck.position, _sizeBox,0f, _groundLayer);
+            bool wall =Physics2D.OverlapBox(transform.position, _sizeBox,0f, _groundLayer);
             bool ground =Physics2D.OverlapCircle(_groundCheck.position, 0.1f, _groundLayer);
             if (wall != _previousWall) SetWall(wall);
             if (ground != _previousGround) SetGround(ground);
@@ -103,6 +95,7 @@ namespace Player
             _previousWall = Wall;
             Wall = wall;
             OnChangeWall?.Invoke(wall);
+            Debug.Log("wall: "+ wall);
         }
         /*public void OnCollisionEnter2D(Collision2D other)
         {
@@ -159,7 +152,7 @@ namespace Player
             _rigidbody2D.velocity = Vector2.zero;
             ChangeScaleDir();
         }
-        
+
         private void Resurrect() //переделать на чекпоинты???
         {
             gameObject.transform.position = _resurrectSave.Position;

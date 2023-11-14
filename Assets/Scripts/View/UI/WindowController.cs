@@ -1,5 +1,6 @@
 using Core.WindowSystem;
 using UnityEngine;
+using YG;
 
 public class WindowController : MonoBehaviour
 {
@@ -38,17 +39,13 @@ public class WindowController : MonoBehaviour
     
     public void LoadMainMenu()
     {
+        YandexGame.FullscreenShow();
         _windowManager.LoadMainMenu();
     }
     public void Restart()
     {
         _windowManager.CloseWindow();
         worldController.Restart();
-    }
-    public void Resurrect()
-    {
-        _windowManager.CloseWindow();
-        worldController.Resurrect();
     }
 
     public void TapSwapGravity(int numberPlayer)

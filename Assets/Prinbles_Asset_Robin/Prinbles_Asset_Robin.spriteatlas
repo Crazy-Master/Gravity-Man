@@ -110,6 +110,7 @@ SpriteAtlas:
     - {fileID: 2800000, guid: 144f77e53af3bde41869f883b98b0c76, type: 3}
     - {fileID: 2800000, guid: acb66bf0df98d784ea8f02732d815da7, type: 3}
     - {fileID: 2800000, guid: e49e634955ed93e4397503c843ffc981, type: 3}
+    - {fileID: 2800000, guid: ca6672985f3991b428833fd4ca504751, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -137,6 +138,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: ec263448823d54f45a866fff8654e5cf, type: 3}
   - {fileID: 21300000, guid: 1d0baf48dca85314ba851bce7adb321d, type: 3}
   - {fileID: 21300000, guid: a4f5fe680df69064bb0b5cc3a47a746d, type: 3}
+  - {fileID: 21300000, guid: ca6672985f3991b428833fd4ca504751, type: 3}
   - {fileID: 21300000, guid: a32688e8d10d9f2478c74fe94088dbd2, type: 3}
   - {fileID: 21300000, guid: e49e634955ed93e4397503c843ffc981, type: 3}
   - {fileID: 21300000, guid: a9d5af3a0553fe742b1a721fc26c5084, type: 3}
@@ -180,6 +182,7 @@ SpriteAtlas:
   - Home
   - ArrowRight
   - Back
+  - BackPlayer
   - Hover
   - BackGame
   - ButtonBack

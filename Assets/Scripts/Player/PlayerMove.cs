@@ -94,7 +94,6 @@ namespace Player
             var force = (float)Math.Round((_speedMove - _rb.velocity.x) * 5);
                if (_playerController.Wall == false && force > 0)
                {
-                   Debug.Log("111");
                    _rb.AddForce(_movement * force, ForceMode2D.Impulse);
                }
 

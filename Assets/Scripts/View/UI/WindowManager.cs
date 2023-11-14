@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Core.Level;
 using UnityEngine;
@@ -34,6 +35,16 @@ namespace Core.WindowSystem
             var obj = Instantiate(_structureWindow.GetWindow(_firstWindow),_canvas);
             obj.GetComponent<WindowController>().Init(this, _worldController);
             _stackWindows.Push(obj);
+        }
+
+        private void OnEnable()
+        {
+           _worldController.OnResurrectGame += CloseWindow;
+        }
+
+        private void OnDisable()
+        {
+            _worldController.OnResurrectGame -= CloseWindow;
         }
 
         #region OpenWindows

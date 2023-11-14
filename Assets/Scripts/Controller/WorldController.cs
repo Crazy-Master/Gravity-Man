@@ -72,4 +72,11 @@ public class WorldController
         OnSwapGravity?.Invoke(numberPlayer);
     }
     
+    public void AdButtonCul(int id)
+    {
+        if (id == 1)
+        {
+            Resurrect();
+        }
+    }
 }

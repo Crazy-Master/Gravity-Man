@@ -1,8 +1,10 @@
+using System;
 using Core.AudioSystem;
 using Player;
 using Unity.VisualScripting;
 using UnityEngine;
 using View.Background;
+using YG;
 using Zenject;
 
 
@@ -26,6 +28,11 @@ public class Bootstrap : MonoBehaviour
 
     [Inject]
     private void Construct(StructureLoadLevel structure) => _structureLL = structure;
+
+    private void OnEnable()
+    {
+        YandexGame.RewardVideoEvent += _worldController.AdButtonCul;
+    }
 
     private void Start()
     {
@@ -93,5 +100,7 @@ public class Bootstrap : MonoBehaviour
     {
         _worldController.OnLoadGame -= StartLevel;
         _worldController.OnLoadMainMenu -= StartMainMenu;
+        YandexGame.RewardVideoEvent -= _worldController.AdButtonCul;
+        
     }
 }
