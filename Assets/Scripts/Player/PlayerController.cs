@@ -17,12 +17,13 @@ namespace Player
     public class PlayerController : MonoBehaviour
     {
         [SerializeField] private Transform _groundCheck;
-        [SerializeField] private Transform _wallCheck;
+        [SerializeField] private Transform _forwardCheck;
         [SerializeField] private LayerMask _groundLayer;
         private SavePlayer _restartSave; //разобраться с гравитацией!!!
         private SavePlayer _resurrectSave;
         private WorldController _worldController;
         private Rigidbody2D _rigidbody2D;
+        private Vector2 _sizeBox;
         public event Action<float> OnChangeGravity;
         public event Action<bool> OnChangeGround;
         public event Action<bool> OnChangeWall;
@@ -37,6 +38,7 @@ namespace Player
         void Awake()
         {
             _rigidbody2D = GetComponent<Rigidbody2D>();
+            _sizeBox = new Vector2(gameObject.GetComponent<CapsuleCollider2D>().size.y * 0.9f, 0.1f);
         }
 
         private void Rayc()
@@ -82,7 +84,7 @@ namespace Player
 
         private void FixedUpdate()
         {
-            bool wall =Physics2D.Raycast(_wallCheck.position, transform.right, 0.1f, _groundLayer);
+            bool wall =Physics2D.OverlapBox(_forwardCheck.position, _sizeBox,0f, _groundLayer);
             bool ground =Physics2D.OverlapCircle(_groundCheck.position, 0.1f, _groundLayer);
             if (wall != _previousWall) SetWall(wall);
             if (ground != _previousGround) SetGround(ground);

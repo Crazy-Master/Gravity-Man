@@ -15,10 +15,6 @@ namespace Player
         private WorldController _worldController;
         private Vector3 _movement = new Vector3(1,0,0);
 
-        [SerializeField] private Transform _targetForward;
-        public float speed;
-        public float smoothTime = 0.3f;
-
 
 
         private void Awake()
@@ -90,10 +86,10 @@ namespace Player
             //{
             //    rb.velocity = rb.velocity.normalized * _speedMove;
             //}
-            RunMoveTowards();
+            Run();
         }
 
-        private void RunMoveTowards()
+        private void Run()
         {
             var force = (float)Math.Round((_speedMove - _rb.velocity.x) * 5);
                if (_playerController.Wall == false && force > 0)
